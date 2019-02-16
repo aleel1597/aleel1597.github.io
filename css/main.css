@@ -80,4 +80,5 @@ body {
   footer {
     font-size: 12px;
     padding: 150px 0;
+    position: relative;
   }
