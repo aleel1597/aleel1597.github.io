@@ -2,7 +2,7 @@
   footer ul {
     position:absolute;
     top:50%;
-    left:35%;
+    left:50%;
     transform:translate(-50%, -50%);
     display:flex;
     margin:0;
