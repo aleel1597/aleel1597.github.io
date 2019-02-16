@@ -5,22 +5,29 @@
 
 <head>
   <title>Alan Lee</title>
+  <link rel="icon" href="images/methumbnail.jpg">
   <meta charset="utf-8" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  
     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/Menu.css">
   <link rel="stylesheet" type="text/css" href="css/Logo.css">
   <link rel="stylesheet" type="text/css" href="css/Brand.css">
+  <link rel="stylesheet" type="text/css" href="css/Social.css">
+
 
 
 </head>
 
 <body>
 
-<header class="container">
+  <header class="container">
 
     <h1 class="col-sm-4 text-left">
 
@@ -39,51 +46,51 @@
 
     <nav class="col-sm-8 text-right">
 
-        <ul class="tab-bar">
-          <li data-num="1" class="tab wave dark">HOME</li>
-          <li data-num="2" class="tab wave dark">ABOUT</li>
-          <li data-num="3" class="tab wave dark">PORTFOLIO</li>
-          <li data-num="4" class="tab wave dark">SOCIAL</li>
-          <li data-num="5" class="tab wave dark">CONTACT</li>
-          <div class="indicator"></div>
-        </ul>
+      <ul class="tab-bar">
+        <li data-num="1" class="tab wave dark">HOME</li>
+        <li data-num="2" class="tab wave dark">ABOUT</li>
+        <li data-num="3" class="tab wave dark">PORTFOLIO</li>
+        <li data-num="4" class="tab wave dark">SOCIAL</li>
+        <li data-num="5" class="tab wave dark">CONTACT</li>
+        <div class="indicator"></div>
+      </ul>
 
-        <script type="text/javascript">
-          var waveBtn = (function () {
-            'use strict';
-            var btn = document.querySelectorAll('.wave'),
-              tab = document.querySelector('.tab-bar'),
-              indicator = document.querySelector('.indicator'),
-              indi = 0;
-            indicator.style.marginLeft = indi + 'px';
+      <script type="text/javascript">
+        var waveBtn = (function () {
+          'use strict';
+          var btn = document.querySelectorAll('.wave'),
+            tab = document.querySelector('.tab-bar'),
+            indicator = document.querySelector('.indicator'),
+            indi = 0;
+          indicator.style.marginLeft = indi + 'px';
 
-            for (var i = 0; i < btn.length; i++) {
-              btn[i].onmousedown = function (e) {
-                var newRound = document.createElement('div'), x, y;
+          for (var i = 0; i < btn.length; i++) {
+            btn[i].onmousedown = function (e) {
+              var newRound = document.createElement('div'), x, y;
 
-                newRound.className = 'cercle';
-                this.appendChild(newRound);
+              newRound.className = 'cercle';
+              this.appendChild(newRound);
 
-                x = e.pageX - this.offsetLeft;
-                y = e.pageY - this.offsetTop;
+              x = e.pageX - this.offsetLeft;
+              y = e.pageY - this.offsetTop;
 
-                newRound.style.left = x + "px";
-                newRound.style.top = y + "px";
-                newRound.className += " anim";
+              newRound.style.left = x + "px";
+              newRound.style.top = y + "px";
+              newRound.className += " anim";
 
-                indicator.style.marginLeft = indi + (this.dataset.num - 1) * 150 + 'px';
+              indicator.style.marginLeft = indi + (this.dataset.num - 1) * 150 + 'px';
 
-                setTimeout(function () {
-                  newRound.remove();
-                }, 1200);
-              };
-            }
-          }());
-        </script>
+              setTimeout(function () {
+                newRound.remove();
+              }, 1200);
+            };
+          }
+        }());
+      </script>
     </nav>
 
 
-</header>
+  </header>
 
   <section class="jumbotron">
     <div class="container">
@@ -120,20 +127,38 @@
 
   <footer class="container">
     <div class="row">
-      <p class="col-sm-4">&copy; 2016 Skillfair</p>
-      <ul class="col-sm-8">
-        <li class="col-sm-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
-        </li>
-        <li class="col-sm-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
-        </li>
-        <li class="col-sm-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
-        </li>
-        <li class="col-md-1">
-          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
-        </li>
+
+      <ul class="col-sm-8 text-center">
+            <li>
+              <a href="https://www.facebook.com/alan.lee.39794">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <span> - Facebook</span>
+              </a>
+            </li>
+            <li>
+               <a href="https://www.linkedin.com/in/alanlee9715/">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <span> - Linkedin</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/aleel1597">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+                <span> - Github</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/alan.lee97/?hl=en">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <span> - Instagram</span>
+              </a>
+            </li>
+            <li>
+                <a href="https://medium.com/@alanlee_80668">
+                  <i class="fa fa-medium" aria-hidden="true"></i>
+                  <span> - Medium</span>
+                </a>
+              </li>
       </ul>
     </div>
   </footer>
