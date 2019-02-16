@@ -12,6 +12,7 @@
   footer ul li {
     list-style:none;
     margin:0 5px;
+    display: inline;
   }
   
   footer ul li a .fa {
