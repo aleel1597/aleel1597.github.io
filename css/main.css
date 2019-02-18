@@ -1,12 +1,16 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    color: #ffffff;
+
   }
   
   header{
     padding: 0px 0;
     display: flex;
     justify-content: flex-end;
+    color: #ffffff;
+
   }
 
   header .row
@@ -30,13 +34,18 @@ body {
    .jumbotron {
     display: flex;
     align-items: center;
-    background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
     background-size: cover;
+    /* background-position: center; */
+    /* background-image: linear-gradient(to bottom right, #7200da, #00b9f1); */
     color: #ffffff;
-    height: 500px;
+    background-color: #ffffff;
+
+    height: 600px;
     text-shadow: 0.25px 0.25px 0.25px #000000;
+    position: relative;
+   
+    z-index: -2;
   }
-  
   .jumbotron h2 {
     font-size: 60px;
     font-weight: 700;
@@ -81,4 +90,5 @@ body {
     font-size: 12px;
     padding: 150px 0;
     position: relative;
+    color: #ffffff;
   }

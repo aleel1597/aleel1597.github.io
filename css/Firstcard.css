@@ -1,0 +1,234 @@
+@import "https://stas-melnikov.ru/r-blocks/r-button.css";
+@import "https://stas-melnikov.ru/r-blocks/r-link.css";
+
+  .cardwrapper {
+    height: 520px;
+    width: 1000px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+
+  }
+  
+  .me-img {
+    float: left;
+    height: 520px;
+    width: 400px;
+  }
+  
+  .me-img img {
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .me-info {
+    float: left;
+    height: 520px;
+    width: 600px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
+  }
+  
+  .me-text {
+    height: 300px;
+    width: 525px;
+  }
+  
+  .me-text h1 {
+    margin: 30px 0 0 60px;
+    padding-top: 52px;
+    font-size: 40px;
+    color: #474747;
+  }
+  
+  .me-text h1,
+  .contact-me-price-btn p {
+    font-family: 'Bentham', serif;
+  }
+  
+  .me-text h2 {
+    margin: 10px 10px 0px 60px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #0080ff;
+    letter-spacing: 0.2em;
+  }
+  
+  .me-text h3 {
+    height: 200px;
+    margin: 10px 0px 0 60px;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+    line-height: 1.7em;
+    font-size: 20px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+  
+
+  .blue-hover {
+    transition: all 0.25s ease-in;
+    border-bottom: 5px solid transparent;
+  }
+  .blue-hover:hover {
+    transform: translateY(-5px);
+    mar
+    border: none;
+    border-bottom: 5px solid #2196fe;
+  }
+
+  .contact-me-btn  {    
+    margin: 30px 0 0  100px;
+    height: 103px;
+    width: 327px;
+    position: center;
+    
+
+
+  }
+  
+  .contact-me-btn  p {
+    display: relative;
+    position: absolute;
+    top: -13px;
+    height: 50px;
+    font-family: 'Trocchi', serif;
+    margin: 0 0 0 38px;
+    font-size: 28px;
+    font-weight: lighter;
+    color: #474747;
+  }
+
+  .contact-me-btn button {
+    float: right;
+    display: inline-block;
+    height: 50px;
+    width: 176px;
+    margin: 0 40px 0 16px;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #7200da;
+    cursor: pointer;
+  }
+  .contact-me-btn button:hover {
+    background-color: #000fe7;
+  }
+
+
+  
+/* 
+  Contactmebutton border */
+
+  .ai-element{
+	--uiaiElementDisplay: var(--aiElementDisplay, inline-flex);	
+	--uiaiElementTextColor: var(--aiElementTextColor);
+	--uiaiElementTextColorHover: var(--aiElementTextColorHover);	
+
+	display: var(--uiaiElementDisplay);
+	color: var(--uiaiElementTextColor);
+	position: relative;
+	overflow: hidden;
+}
+/* ai-element_padding-all */ 
+
+.ai-element_padding-all{
+	--uiaiElementLineWeight: var(--aiElementLineWeight, 2px);
+	--uiaiElementLineColor: var(--aiElementLineColor, #000);
+	--uiaiElementPadding: var(--aiElementPadding, 5px);
+
+	padding: var(--uiaiElementPadding);
+}
+
+.ai-element_padding-all::before, 
+.ai-element_padding-all::after{
+	width: 100%;
+	height: var(--uiaiElementLineWeight);
+	left: 0;
+}
+
+.ai-element_padding-all::before{
+	top: 0;
+}
+
+.ai-element_padding-all::after{
+	bottom: 0;
+}
+
+.ai-element_padding-all .ai-element__label::before,
+.ai-element_padding-all .ai-element__label::after{
+	width: var(--uiaiElementLineWeight);
+	height: 100%;
+	top: 0;
+}
+
+.ai-element_padding-all .ai-element__label::before{
+	left: 0;
+}
+
+.ai-element_padding-all .ai-element__label::after{
+	right: 0;
+}
+
+.ai-element_padding-all::before,
+.ai-element_padding-all::after,
+.ai-element_padding-all .ai-element__label::before,
+.ai-element_padding-all .ai-element__label::after{
+	content: "";     
+	background-color: var(--uiaiElementLineColor);
+	position: absolute; 
+	opacity: 1;
+
+	will-change: transform, opacity;
+	transition-property: transform, opacity;
+}
+
+.ai-element_padding-all:hover::before,
+.ai-element_padding-all:hover::after,
+.ai-element_padding-all:hover .ai-element__label::before,
+.ai-element_padding-all:hover .ai-element__label::after{
+	opacity: 0;
+}
+
+
+.ai-element4::before,
+.ai-element4::after,
+.ai-element4 .ai-element__label::before,
+.ai-element4 .ai-element__label::after{
+	transition-timing-function: ease-out;
+	transition-duration: .2s, .2s;
+	transform: translate3d(0, 0, 0);
+}
+
+.ai-element4:hover::before,
+.ai-element4:hover::after,
+.ai-element4:hover .ai-element__label::before,
+.ai-element4:hover .ai-element__label::after{
+	transition-delay: 0s, .05s;	
+}
+
+.ai-element4:hover::before{
+	transform: translate3d(-100%, 0, 0);
+}
+
+.ai-element4:hover::after{
+	transform: translate3d(100%, 0, 0);
+}
+
+.ai-element4:hover .ai-element__label::before{
+	transform: translate3d(0, 100%, 0);
+}
+
+.ai-element4:hover .ai-element__label::after{
+	transform: translate3d(0, -100%, 0);
+}
+
+
