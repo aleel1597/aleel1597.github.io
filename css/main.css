@@ -1,35 +1,26 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    color: #ffffff;
-
-  }
+  height: 100%;
+  background: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif;
   
-  header{
-    padding: 0px 0;
-    display: flex;
-    justify-content: flex-end;
-    color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 
-  }
 
-  header .row
-  {
-    display: flex;
-    align-items: center;
-  }
-  
   footer .row {
     display: flex;
     align-items: center;
+
   }
   
 
-  
-  header nav {
-    display: flex;
-    justify-content: flex-end;
-  }
+
 
    .jumbotron {
     display: flex;
@@ -90,5 +81,5 @@ body {
     font-size: 12px;
     padding: 150px 0;
     position: relative;
-    color: #ffffff;
+    color: #b65555;
   }

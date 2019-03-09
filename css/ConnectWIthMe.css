@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+
+.connect_with_me_container {
+  display: flex;
+  background-image: linear-gradient(to bottom right, #6998d6,#dbabf7);
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+
+  height: 150px;
+}
+
+.Connect_with_me_text {
+  display: inline-block;
+}
+
+.Connect_with_me_text .middle-letters, .Connect_with_me_text .end-letters, .Connect_with_me_text .alternate-middle-letters,
+.Connect_with_me_text .alternate-middle-letters1,.Connect_with_me_text .alternate-middle-letters2, .Connect_with_me_text .alternate-middle-letters3 {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+}
+
+.Connect_with_me_text .end-letters {
+  color: rgb(1, 28, 146);
+}
+
+.Connect_with_me_text .middle-letters{
+  color: #3b5998;
+}
+
+.Connect_with_me_text .alternate-middle-letters{
+  color: #097aa5;
+}
+
+.Connect_with_me_text .alternate-middle-letters1{
+  color: #4d4d4d;
+}
+
+.Connect_with_me_text .alternate-middle-letters2{
+  color: #e4405f;
+}
+
+.Connect_with_me_text .alternate-middle-letters3 {
+  color:  #000000;
+}
+
+.Connect_with_me_text .middle-letters {
+  animation: Connect_with_me-middle-letters-animation 10s infinite;
+  max-width: 0;
+}
+
+.Connect_with_me_text .alternate-middle-letters {
+  animation: Connect_with_me-alternate-middle-letters-animation 10s infinite;
+  max-width: 0;
+}
+
+.Connect_with_me_text .alternate-middle-letters1 {
+  animation: Connect_with_me-alternate-middle-letters-animation1 10s infinite;
+  max-width: 0;
+}
+
+.Connect_with_me_text .alternate-middle-letters2 {
+  animation: Connect_with_me-alternate-middle-letters-animation2 10s infinite;
+  max-width: 0;
+}
+
+.Connect_with_me_text .alternate-middle-letters3 {
+  animation: Connect_with_me-alternate-middle-letters-animation3 10s infinite;
+  max-width: 0;
+}
+
+@keyframes Connect_with_me-middle-letters-animation {
+  0% {
+    max-width: 0;
+  }
+  10% {
+    max-width: 500px;
+  }
+  20% {
+    max-width: 0;
+  }
+  30% {
+    max-width: 0;
+  }
+  40% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 0;
+  }
+  60% {
+    max-width: 0;
+  }
+  70% {
+    max-width: 0;
+  }
+  80% {
+    max-width: 0;
+  }
+  90% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+@keyframes Connect_with_me-alternate-middle-letters-animation {
+  0% {
+    max-width: 0;
+  }
+  10% {
+    max-width: 0;
+  }
+  20% {
+    max-width: 0;
+  }
+  30% {
+    max-width: 500px;
+  }
+  40% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 0;
+  }
+  60% {
+    max-width: 0;
+  }
+  70% {
+    max-width: 0;
+  }
+  80% {
+    max-width: 0;
+  }
+  90% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+@keyframes Connect_with_me-alternate-middle-letters-animation1 {
+  0% {
+    max-width: 0;
+  }
+  10% {
+    max-width: 0;
+  }
+  20% {
+    max-width: 0;
+  }
+  30% {
+    max-width: 0;
+  }
+  40% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 500px;
+  }
+  60% {
+    max-width: 0;
+  }
+  70% {
+    max-width: 0;
+  }
+  80% {
+    max-width: 0;
+  }
+  90% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+
+@keyframes Connect_with_me-alternate-middle-letters-animation2 {
+  0% {
+    max-width: 0;
+  }
+  10% {
+    max-width: 0;
+  }
+  20% {
+    max-width: 0;
+  }
+  30% {
+    max-width: 0;
+  }
+  40% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 0;
+  }
+  60% {
+    max-width: 0;
+  }
+  70% {
+    max-width: 500px;
+  }
+  80% {
+    max-width: 0;
+  }
+  90% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 0;
+  }
+}
+
+@keyframes Connect_with_me-alternate-middle-letters-animation3 {
+  0% {
+    max-width: 0;
+  }
+  10% {
+    max-width: 0;
+  }
+  20% {
+    max-width: 0;
+  }
+  30% {
+    max-width: 0;
+  }
+  40% {
+    max-width: 0;
+  }
+  50% {
+    max-width: 0;
+  }
+  60% {
+    max-width: 0;
+  }
+  70% {
+    max-width: 0;
+  }
+  80% {
+    max-width: 0;
+  }
+  90% {
+    max-width: 500px;
+  }
+  100% {
+    max-width: 0;
+  }
+}

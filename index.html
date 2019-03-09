@@ -1,97 +1,83 @@
 <!DOCTYPE html>
-<html>
-
-<html>
+<html ng-app="ngMap">
 
 <head>
   <title>Alan Lee</title>
   <meta charset="utf-8" />
+
+  <!-- Online Includes -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+  <!-- tab icon -->
   <link rel="icon" href="images/methumbnail.jpg">
 
+  <!-- CSS Includes -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/Menu.css">
   <link rel="stylesheet" type="text/css" href="css/Brand.css">
   <link rel="stylesheet" type="text/css" href="css/Social.css">
-  <link rel="stylesheet" type="text/css" href="css/ThingsILike.css">
+  <link rel="stylesheet" type="text/css" href="css/ConnectWIthMe.css">
   <link rel="stylesheet" type="text/css" href="css/Firstcard.css">
-  <link rel="stylesheet" type="text/css" href="css/Ocean.css">
-  <link rel="stylesheet" type="text/css" href="css/CategoryCards.css">
-
+  <link rel="stylesheet" type="text/css" href="css/MyTravel.css">
+  <link rel="stylesheet" type="text/css" href="css/Timeline.css">
+  <link rel="stylesheet" type="text/css" href="css/Map.css">
 
 </head>
 
 <body>
 
-  <!-- Brand and Menu -->
-  <header class="container">
+  <!-- Menu -->
+  <ul class="tab-bar">
+    <li data-num="1" class="tab wave dark">HOME</li>
+    <li data-num="2" class="tab wave dark">TIMELINE</li>
+    <li data-num="3" class="tab wave dark">TRAVELS</li>
+    <li data-num="4" class="tab wave dark">HOBBIES</li>
+    <li data-num="5" class="tab wave dark">RESUME</li>
+    <div class="indicator"></div>
+  </ul>
+  <script type="text/javascript">
+    var waveBtn = (function () {
+      'use strict';
+      var btn = document.querySelectorAll('.wave'),
+        tab = document.querySelector('.tab-bar'),
+        indicator = document.querySelector('.indicator'),
+        indi = 0;
+      indicator.style.marginLeft = indi + 'px';
 
-    <h1 class="col-sm-4 text-left">
+      for (var i = 0; i < btn.length; i++) {
+        btn[i].onmousedown = function (e) {
+          var newRound = document.createElement('div'), x, y;
 
-      <div class="wrapper">
-        <div class="letters">
-          <span class="letter">A</span>
-          <span class="letter">l</span>
-          <span class="letter">a</span>
-          <span class="letter">n</span>
-          <span class="letter">L</span>
-          <span class="letter">e</span>
-          <span class="letter">e</span>
-        </div>
-      </div>
-    </h1>
+          newRound.className = 'cercle';
+          this.appendChild(newRound);
 
-    <nav class="col-sm-8 text-right">
+          x = e.pageX - this.offsetLeft;
+          y = e.pageY - this.offsetTop;
 
-      <ul class="tab-bar">
-        <li data-num="1" class="tab wave dark">HOME</li>
-        <li data-num="2" class="tab wave dark">ABOUT</li>
-        <li data-num="3" class="tab wave dark">PORTFOLIO</li>
-        <li data-num="4" class="tab wave dark">SOCIAL</li>
-        <li data-num="5" class="tab wave dark">CONTACT</li>
-        <div class="indicator"></div>
-      </ul>
+          newRound.style.left = x + "px";
+          newRound.style.top = y + "px";
+          newRound.className += " anim";
 
-      <script type="text/javascript">
-        var waveBtn = (function () {
-          'use strict';
-          var btn = document.querySelectorAll('.wave'),
-            tab = document.querySelector('.tab-bar'),
-            indicator = document.querySelector('.indicator'),
-            indi = 0;
-          indicator.style.marginLeft = indi + 'px';
+          indicator.style.marginLeft = indi + (this.dataset.num - 1) * 150 + 'px';
 
-          for (var i = 0; i < btn.length; i++) {
-            btn[i].onmousedown = function (e) {
-              var newRound = document.createElement('div'), x, y;
-
-              newRound.className = 'cercle';
-              this.appendChild(newRound);
-
-              x = e.pageX - this.offsetLeft;
-              y = e.pageY - this.offsetTop;
-
-              newRound.style.left = x + "px";
-              newRound.style.top = y + "px";
-              newRound.className += " anim";
-
-              indicator.style.marginLeft = indi + (this.dataset.num - 1) * 150 + 'px';
-
-              setTimeout(function () {
-                newRound.remove();
-              }, 1200);
-            };
-          }
-        }());
-      </script>
-    </nav>
-
-
-  </header>
+          setTimeout(function () {
+            newRound.remove();
+          }, 1200);
+        };
+      }
+    }());
+  </script>
 
   <!-- Intro card -->
   <section class="jumbotron">
@@ -123,182 +109,370 @@
 
       </div>
 
-      <!-- Ocean -->
-            
-      <div class="ocean">
-          <div class="sun"></div>
-          <!-- <div class="clouds">
-            <div></div>
-            <div></div>
-            <div></div> -->
-          </div>
-          <div class="sea">
-
-            </div>
-          </div>
-          <div class="bottom">
-            <div class="grass"><span> </span><span> </span><span> </span>
-            </div>
-            <div class="grass"><span> </span><span> </span><span> </span>
-            </div>
-            <div class="grass"><span> </span><span> </span><span> </span>
-            </div>
-            <div class="grass"><span> </span><span> </span><span> </span>
-            </div>
-            <div class="bubble"><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="bubble"><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="bubble"><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="bubble"><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <div class="grass_tw"></div>
-            <div class="grass_tw"></div>
-            <div class="grass_tw"></div>
-          </div>
-      </div>
 
 
 
     </div>
   </section>
 
-  <!-- Section card -->
-  <section class="container">
-    <div class="row">
-
-      <figure class="col-sm-3">
-          <a href="#" class="card education">
-              <div class="overlay"></div>
-           <div class="circle">
-         
-         <svg width="71px" height="76px" viewBox="29 14 71 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-             <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-             <desc>Created with Sketch.</desc>
-             <defs></defs>
-             <g id="Group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(30.000000, 14.000000)">
-                 <g id="Group-8" fill="#D98A19">
-                     <g id="Group-7">
-                         <g id="Group-6">
-                             <path d="M0,0 L0,75.9204805 L69.1511499,75.9204805 L0,0 Z M14.0563973,32.2825679 L42.9457663,63.9991501 L14.2315268,63.9991501 L14.0563973,32.2825679 Z" id="Fill-1"></path>
-                         </g>
-                     </g>
-                 </g>
-                 <g id="Group-20" transform="translate(0.000000, 14.114286)" stroke="#FFFFFF" stroke-linecap="square">
-                     <path d="M0.419998734,54.9642857 L4.70316223,54.9642857" id="Line"></path>
-                     <path d="M0.419998734,50.4404762 L4.70316223,50.4404762" id="Line"></path>
-                     <path d="M0.419998734,45.9166667 L4.70316223,45.9166667" id="Line"></path>
-                     <path d="M0.419998734,41.3928571 L2.93999114,41.3928571" id="Line"></path>
-                     <path d="M0.419998734,36.8690476 L4.70316223,36.8690476" id="Line"></path>
-                     <path d="M0.419998734,32.3452381 L4.70316223,32.3452381" id="Line"></path>
-                     <path d="M0.419998734,27.8214286 L4.70316223,27.8214286" id="Line"></path>
-                     <path d="M0.419998734,23.297619 L2.93999114,23.297619" id="Line"></path>
-                     <path d="M0.419998734,18.7738095 L4.70316223,18.7738095" id="Line"></path>
-                     <path d="M0.419998734,14.25 L4.70316223,14.25" id="Line"></path>
-                     <path d="M0.419998734,9.72619048 L4.70316223,9.72619048" id="Line"></path>
-                     <path d="M0.419998734,5.20238095 L2.93999114,5.20238095" id="Line"></path>
-                     <path d="M0.419998734,0.678571429 L4.70316223,0.678571429" id="Line"></path>
-                 </g>
-             </g>
-         </svg>
-           </div>
-           <p>Professional</p>
-         </a>
-      </figure>
-
-      <figure class="col-sm-3">
-          <a href="#" class="card credentialing">
-              <div class="overlay"></div>
-           <div class="circle">
-             
-         <svg width="64px" height="72px" viewBox="27 21 64 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-             <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-             <desc>Created with Sketch.</desc>
-             <defs>
-                 <polygon id="path-1" points="60.9784821 18.4748913 60.9784821 0.0299638385 0.538377293 0.0299638385 0.538377293 18.4748913"></polygon>
-             </defs>
-             <g id="Group-12" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(27.000000, 21.000000)">
-                 <g id="Group-5">
-                     <g id="Group-3" transform="translate(2.262327, 21.615176)">
-                         <mask id="mask-2" fill="white">
-                             <use xlink:href="#path-1"></use>
-                         </mask>
-                         <g id="Clip-2"></g>
-                         <path d="M7.17774177,18.4748913 L54.3387782,18.4748913 C57.9910226,18.4748913 60.9789911,15.7266455 60.9789911,12.3681986 L60.9789911,6.13665655 C60.9789911,2.77820965 57.9910226,0.0299638385 54.3387782,0.0299638385 L7.17774177,0.0299638385 C3.52634582,0.0299638385 0.538377293,2.77820965 0.538377293,6.13665655 L0.538377293,12.3681986 C0.538377293,15.7266455 3.52634582,18.4748913 7.17774177,18.4748913" id="Fill-1" fill="#59A785" mask="url(#mask-2)"></path>
-                     </g>
-                     <polygon id="Fill-4" fill="#FFFFFF" transform="translate(31.785111, 30.877531) rotate(-2.000000) translate(-31.785111, -30.877531) " points="62.0618351 55.9613216 7.2111488 60.3692832 1.50838775 5.79374073 56.3582257 1.38577917"></polygon>
-                     <ellipse id="Oval-3" fill="#25D48A" opacity="0.216243004" cx="30.0584472" cy="21.7657707" rx="9.95169733" ry="9.17325562"></ellipse>
-                     <g id="Group-4" transform="translate(16.959615, 6.479082)" fill="#54C796">
-                         <polygon id="Fill-6" points="10.7955395 21.7823628 0.11873799 11.3001058 4.25482787 7.73131106 11.0226557 14.3753897 27.414824 1.77635684e-15 31.3261391 3.77891399"></polygon>
-                     </g>
-                     <path d="M4.82347935,67.4368303 L61.2182039,67.4368303 C62.3304205,67.4368303 63.2407243,66.5995595 63.2407243,65.5765753 L63.2407243,31.3865871 C63.2407243,30.3636029 62.3304205,29.5263321 61.2182039,29.5263321 L4.82347935,29.5263321 C3.71126278,29.5263321 2.80095891,30.3636029 2.80095891,31.3865871 L2.80095891,65.5765753 C2.80095891,66.5995595 3.71126278,67.4368303 4.82347935,67.4368303" id="Fill-8" fill="#59B08B"></path>
-                     <path d="M33.3338063,67.4368303 L61.2181191,67.4368303 C62.3303356,67.4368303 63.2406395,66.5995595 63.2406395,65.5765753 L63.2406395,31.3865871 C63.2406395,30.3636029 62.3303356,29.5263321 61.2181191,29.5263321 L33.3338063,29.5263321 C32.2215897,29.5263321 31.3112859,30.3636029 31.3112859,31.3865871 L31.3112859,65.5765753 C31.3112859,66.5995595 32.2215897,67.4368303 33.3338063,67.4368303" id="Fill-10" fill="#4FC391"></path>
-                     <path d="M29.4284029,33.2640869 C29.4284029,34.2202068 30.2712569,34.9954393 31.3107768,34.9954393 C32.3502968,34.9954393 33.1931508,34.2202068 33.1931508,33.2640869 C33.1931508,32.3079669 32.3502968,31.5327345 31.3107768,31.5327345 C30.2712569,31.5327345 29.4284029,32.3079669 29.4284029,33.2640869" id="Fill-15" fill="#FEFEFE"></path>
-                     <path d="M8.45417501,71.5549073 L57.5876779,71.5549073 C60.6969637,71.5549073 63.2412334,69.2147627 63.2412334,66.3549328 L63.2412334,66.3549328 C63.2412334,63.4951029 60.6969637,61.1549584 57.5876779,61.1549584 L8.45417501,61.1549584 C5.34488919,61.1549584 2.80061956,63.4951029 2.80061956,66.3549328 L2.80061956,66.3549328 C2.80061956,69.2147627 5.34488919,71.5549073 8.45417501,71.5549073" id="Fill-12" fill="#5BD6A2"></path>
-                 </g>
-             </g>
-         </svg>
-         
-           </div>
-           <p>Travels</p>
-         </a>
-      </figure>
-
-      <figure class="col-sm-3">
-          <a href="#" class="card wallet">
-              <div class="overlay"></div>
-          <div class="circle">
-            
-            
-        <svg width="78px" height="60px" viewBox="23 29 78 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs></defs>
-            <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(23.000000, 29.500000)">
-                <rect id="Rectangle-3" fill="#AC8BE9" x="67.8357511" y="26.0333433" width="9.40495664" height="21.8788565" rx="4.70247832"></rect>
-                <rect id="Rectangle-3" fill="#6A5297" x="67.8357511" y="38.776399" width="9.40495664" height="10.962961" rx="4.70247832"></rect>
-                <polygon id="Rectangle-2" fill="#6A5297" points="57.3086772 0 67.1649301 26.3776902 14.4413177 45.0699507 4.58506484 18.6922605"></polygon>
-                <path d="M0,19.6104296 C0,16.2921718 2.68622235,13.6021923 5.99495032,13.6021923 L67.6438591,13.6021923 C70.9547788,13.6021923 73.6388095,16.2865506 73.6388095,19.6104296 L73.6388095,52.6639057 C73.6388095,55.9821635 70.9525871,58.672143 67.6438591,58.672143 L5.99495032,58.672143 C2.68403068,58.672143 0,55.9877847 0,52.6639057 L0,19.6104296 Z" id="Rectangle" fill="#8B6FC0"></path>
-                <path d="M47.5173769,27.0835169 C45.0052827,24.5377699 40.9347162,24.5377699 38.422622,27.0835169 L36.9065677,28.6198808 L35.3905134,27.0835169 C32.8799903,24.5377699 28.8078527,24.5377699 26.2957585,27.0835169 C23.7852354,29.6292639 23.7852354,33.7559532 26.2957585,36.3001081 L36.9065677,47.0530632 L47.5173769,36.3001081 C50.029471,33.7559532 50.029471,29.6292639 47.5173769,27.0835169" id="Fill-12" fill="#F6F1FF"></path>
-                <rect id="Rectangle-4" fill="#AC8BE9" x="58.0305835" y="26.1162588" width="15.6082259" height="12.863158"></rect>
-                <ellipse id="Oval" fill="#FFFFFF" cx="65.8346965" cy="33.0919007" rx="2.20116007" ry="2.23319575"></ellipse>
-            </g>
-        </svg>
-        
-          </div>
-          <p>Hobbies</p>
-        </a>
-      </figure>
-    
-      <figure class="col-sm-3">
-          <a href="#" class="card human-resources">
-              <div class="overlay"></div>
-           <div class="circle">
-              
-             
-         <svg width="66px" height="77px" viewBox="1855 26 66 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-             <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-             <desc>Created with Sketch.</desc>
-             <defs></defs>
-             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1855.000000, 26.000000)">
-                 <path d="M4.28872448,42.7464904 C4.28872448,39.3309774 5.4159227,33.7621426 6.40576697,30.4912557 C10.5920767,32.1098991 14.3021264,35.1207513 18.69596,35.1207513 C30.993618,35.1207513 42.5761396,28.7162991 49.9992251,17.9014817 C56.8027248,23.8881252 60.8188351,33.0463165 60.8188351,42.7464904 C60.8188351,60.817447 47.6104607,76.6693426 32.5537798,76.6693426 C17.4970989,76.6693426 4.28872448,60.817447 4.28872448,42.7464904" id="Fill-8" fill="#AFCEFF"></path>
-                 <path d="M64.3368879,31.1832696 L62.8424171,46.6027478 L60.6432609,46.7824348 L59.8340669,34.6791304 L47.6573402,25.3339478 C44.2906753,34.068487 34.3459503,40.2903304 24.4684093,40.2903304 C17.7559812,40.2903304 10.046244,37.4168 5.80469412,32.8004522 L5.80469412,34.6791304 L5.80469412,46.6027478 L4.28932167,46.6027478 L1.30187314,27.8802435 C1.30187314,20.9790957 3.52342407,15.5432 7.27229127,11.3578087 C13.132229,4.79558261 21.8124018,0.0492173913 30.5672235,0.342852174 C37.4603019,0.569286957 42.6678084,2.72991304 50.8299179,0.342852174 C51.4629405,1.44434783 51.8615656,3.00455652 51.5868577,5.22507826 C51.4629405,6.88316522 51.2106273,7.52302609 50.8299179,8.45067826 C58.685967,14.1977391 64.3368879,20.7073739 64.3368879,31.1832696" id="Fill-10" fill="#3B6CB7"></path>
-                 <path d="M58.9405197,54.5582052 C62.0742801,54.8270052 65.3603242,52.60064 65.6350321,49.5386574 C65.772386,48.009127 65.2617876,46.5570226 64.3182257,45.4584487 C63.3761567,44.3613357 62.0205329,43.6162922 60.4529062,43.4818922 L58.9405197,54.5582052 Z" id="Fill-13" fill="#568ADC"></path>
-                 <path d="M6.32350389,54.675367 C3.18227865,54.8492104 0.484467804,52.4957496 0.306803449,49.4264626 C0.217224782,47.8925496 0.775598471,46.4579757 1.75200594,45.3886191 C2.7284134,44.3192626 4.10792487,43.6165843 5.67853749,43.530393 L6.32350389,54.675367 Z" id="Fill-15" fill="#568ADC"></path>
-             </g>
-         </svg>
-         
-           </div>
-           <p>Life Timeline</p>
-         </a>
-      </figure>
-
+  <!-- Timeline Intro-->
+  <section class="intro">
+    <div class="container">
+      <h1 class="timeline_intro"">My professional life at a glance &darr;</h1>
     </div>
   </section>
 
-    <!-- Social Buttons-->
-  <footer class="container">
-    <div class="row">
+  <!-- Timeline -->
+  <section class="timeline">
+    <ul>
+      <li>
+        <div>
+          <time>1997</time> Born in Boston MA
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>2003</time> My father bootstraps CareEverywhere, a SaaS B2B medical device operational platform. Funded with a second morgage on our home, taking naps under a desk in our small office was the norm then.
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>2006</time> Our second family startup, Zyno Medical, a drug infusion medical device venture is founded. I am now in third grade, coming to the office regularly to help setup furniture.
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>2012</time> I spend my first summer working full time at Zyno. My involvement within my family's startups becomes real and helping in whatever free time with anything needed becomes the norm.
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>2014</time> A spin off of Zyno, Infutronix is founded and launches its new medical device, the Nimbus ambulatory infusion pump.
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>2015</time> I get my first non family startup internship at Verizon as a UI/UX Intern, High school graduation, and I start college at Univeristy of Illinois at Urbana Champaign
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>2017</time> I start working my first real external job at SIEMENS Healthineers as a Software Engineer Co-Op building software for CT scanners.
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>2018</time> My next job leads me to Blue Cross Blue Shield where I become a mix of a Business Analyst, Prototype Software Engineer, and a Product Manager.
+        </div>
+      </li>
 
+      <li>
+        <div>
+          <time>2019</time> I graduate college from Univeristy of Illinois at Urbana Champaign with a Bachelors in Computer Engineering. I start my new job at IBM as a Technical Solutions Specialist.
+        </div>
+      </li>
+      <li>
+        <div>
+          <time>Beyond</time> More adventure awaits!
+        </div>
+      </li>
+      
+    </ul>
+  </section>
+  <script type="text/javascript">
+    (function () {
+
+      'use strict';
+
+      // define variables
+      var items = document.querySelectorAll(".timeline li");
+
+      // check if an element is in viewport
+      // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            items[i].classList.add("in-view");
+          }
+        }
+      }
+
+      // listen for events
+      window.addEventListener("load", callbackFunc);
+      window.addEventListener("resize", callbackFunc);
+      window.addEventListener("scroll", callbackFunc);
+
+    })();
+  </script>
+
+  <!-- My Travels Intro -->
+  <section class="my_travels_section">
+    <div class="my_travels_div">
+      <h1 class="highlight" href="">
+        Some of my favorite adventures around the world
+      </h1>
+      <p class = "travel_text">
+        Travel is a major facet of my life. A constant goal of mine is to visit places that will expand my worldview. Everytime I visit a new country, I try to gain a larger appreciation for <a class="highlight" href="">diversity</a> of culture.
+      </p>    </div>
+  </section>
+
+  <!-- Map -->
+  <div id="map" style="width: 100%; height: 400px; background: grey"></div>
+  <script type="text/javascript" charset="UTF-8">
+
+    /**
+     * Adds markers to the map highlighting the locations of the captials of
+     * France, Italy, Germany, Spain and the United Kingdom.
+     *
+     * @param  {H.Map} map      A HERE Map instance within the application
+     */
+    function addMarkersToMap(map) {
+      var parisMarker = new H.map.Marker({ lat: 48.8567, lng: 2.3508 });
+      map.addObject(parisMarker);
+
+      var romeMarker = new H.map.Marker({ lat: 41.9, lng: 12.5 });
+      map.addObject(romeMarker);
+
+      var berlinMarker = new H.map.Marker({ lat: 52.5166, lng: 13.3833 });
+      map.addObject(berlinMarker);
+
+      var madridMarker = new H.map.Marker({ lat: 40.4, lng: -3.6833 });
+      map.addObject(madridMarker);
+
+      var londonMarker = new H.map.Marker({ lat: 51.5008, lng: -0.1224 });
+      map.addObject(londonMarker);
+
+      var amsterdamMarker = new H.map.Marker({ lat: 52.371442, lng: 4.896837 });
+      map.addObject(amsterdamMarker);
+
+      var pragueMarker = new H.map.Marker({ lat: 50.088257, lng: 14.403474 });
+      map.addObject(pragueMarker);
+
+      var viennaMarker = new H.map.Marker({ lat: 48.208391, lng: 16.372572 });
+      map.addObject(viennaMarker);
+
+      var veniceMarker = new H.map.Marker({ lat: 45.440467, lng: 12.320520 });
+      map.addObject(veniceMarker);
+
+      var florenceMarker = new H.map.Marker({ lat: 43.772326, lng: 11.254611 });
+      map.addObject(florenceMarker);
+
+      var lisbonMarker = new H.map.Marker({ lat: 38.712271, lng: -9.145330 });
+      map.addObject(lisbonMarker);
+
+      var AlbufeiraMarker = new H.map.Marker({ lat: 37.087798, lng: -8.249083 });
+      map.addObject(AlbufeiraMarker);
+
+      var granadaMarker = new H.map.Marker({ lat: 37.174854, lng: -3.600292 });
+      map.addObject(granadaMarker);
+
+      var tanzaniaMarker = new H.map.Marker({ lat: -3.071732, lng: 37.348668 });
+      map.addObject(tanzaniaMarker);
+
+      var hungaryMarker = new H.map.Marker({ lat: 47.501403, lng: 19.057675 });
+      map.addObject(hungaryMarker);
+
+      var icelandMarker = new H.map.Marker({ lat: 64.142108, lng: -21.927409 });
+      map.addObject(icelandMarker);
+
+      var shanghaiMarker = new H.map.Marker({ lat: 31.218439, lng: 121.469693 });
+      map.addObject(shanghaiMarker);
+
+      var beijingMarker = new H.map.Marker({ lat: 39.915662, lng: 116.396972 });
+      map.addObject(beijingMarker);
+
+      var guilinMarker = new H.map.Marker({ lat: 25.272194, lng: 110.292077 });
+      map.addObject(guilinMarker);
+
+      var xianMarker = new H.map.Marker({ lat: 34.285346, lng: 108.964471 });
+      map.addObject(xianMarker);
+
+      var bangkokMarker = new H.map.Marker({ lat: 13.745698, lng: 100.540430 });
+      map.addObject(bangkokMarker);
+
+      var taipeiMarker = new H.map.Marker({ lat: 25.039409, lng: 121.517900 });
+      map.addObject(taipeiMarker);
+
+      var khaosiungMarker = new H.map.Marker({ lat: 22.623352, lng: 120.301308 });
+      map.addObject(khaosiungMarker);
+
+      var tokyoMarker = new H.map.Marker({ lat: 35.669945, lng: 139.763695 });
+      map.addObject(tokyoMarker);
+
+      var osakaMarker = new H.map.Marker({ lat: 34.693849, lng: 135.496777 });
+      map.addObject(osakaMarker);
+
+      var sydneyMarker = new H.map.Marker({ lat: -33.858712, lng: 151.207143 });
+      map.addObject(sydneyMarker);
+
+      var melbourneMarker = new H.map.Marker({ lat: -37.823792, lng: 144.958726 });
+      map.addObject(melbourneMarker);
+
+      var brisbaneMarker = new H.map.Marker({ lat: -27.455769, lng: 153.039290 });
+      map.addObject(brisbaneMarker);
+
+      var auckalndMarker = new H.map.Marker({ lat: -36.858382, lng: 174.759596 });
+      map.addObject(auckalndMarker);
+
+      var christchruchMarker = new H.map.Marker({ lat: -43.535690, lng: 172.637083 });
+      map.addObject(christchruchMarker);
+
+      var queenstownMarker = new H.map.Marker({ lat: -45.03225, lng: 168.660501 });
+      map.addObject(queenstownMarker);
+
+      var sanjoseMarker = new H.map.Marker({ lat: 9.933383, lng: -84.081681 });
+      map.addObject(sanjoseMarker);
+
+      var montegobayMarker = new H.map.Marker({ lat: 18.471621, lng: -77.922979 });
+      map.addObject(montegobayMarker);
+
+      var sanjuanMarker = new H.map.Marker({ lat: 18.449166, lng: -66.081055 });
+      map.addObject(sanjuanMarker);
+
+      var martiniqueMarker = new H.map.Marker({ lat: 14.606333, lng: -61.070771 });
+      map.addObject(martiniqueMarker);
+
+      var nassauMarker = new H.map.Marker({ lat: 25.070129, lng: -77.343523 });
+      map.addObject(nassauMarker);
+
+      var miamiMarker = new H.map.Marker({ lat: 25.777713, lng: -80.191005 });
+      map.addObject(miamiMarker);
+
+      var nashvilleMarker = new H.map.Marker({ lat: 36.163887, lng: -86.778551 });
+      map.addObject(nashvilleMarker);
+
+      var DCMarker = new H.map.Marker({ lat: 38.902448, lng: -77.036524 });
+      map.addObject(DCMarker);
+
+      var NYCMarker = new H.map.Marker({ lat: 40.725136, lng: -73.995264 });
+      map.addObject(NYCMarker);
+
+      var bostonMarker = new H.map.Marker({ lat: 42.360137, lng: -71.055271 });
+      map.addObject(bostonMarker);
+
+      var burlingtonMarker = new H.map.Marker({ lat: 44.477636, lng: -73.215845 });
+      map.addObject(burlingtonMarker);
+
+      var barharborMarker = new H.map.Marker({ lat: 44.389764, lng: -68.204725 });
+      map.addObject(barharborMarker);
+
+      var montrealMarker = new H.map.Marker({ lat: 45.499893, lng: -73.574707 });
+      map.addObject(montrealMarker);
+
+      var gunstockMarker = new H.map.Marker({ lat: 43.547775, lng: -71.406832 });
+      map.addObject(gunstockMarker);
+
+      var champgainMarker = new H.map.Marker({ lat: 40.110407, lng: -88.231489 });
+      map.addObject(champgainMarker);
+
+      var chicagoMarker = new H.map.Marker({ lat: 41.893758, lng: -87.623723 });
+      map.addObject(chicagoMarker);
+
+      var stlousMarker = new H.map.Marker({ lat: 38.630550, lng: -90.194820 });
+      map.addObject(stlousMarker);
+
+      var yellowstoneMarker = new H.map.Marker({ lat: 44.414069, lng: -110.578669 });
+      map.addObject(yellowstoneMarker);
+
+      var saltlakeMarker = new H.map.Marker({ lat: 40.765367, lng: -111.894749 });
+      map.addObject(saltlakeMarker);
+
+      var pheonixMarker = new H.map.Marker({ lat: 33.434245, lng: -112.092680 });
+      map.addObject(pheonixMarker);
+
+      var grandcanyonMarker = new H.map.Marker({ lat: 36.050504, lng: -112.105224 });
+      map.addObject(grandcanyonMarker);
+
+      var lasvegasMarker = new H.map.Marker({ lat: 36.173856, lng: -115.148497 });
+      map.addObject(lasvegasMarker);
+
+      var sandiegoMarker = new H.map.Marker({ lat: 32.713696, lng: -117.160990 });
+      map.addObject(sandiegoMarker);
+
+      var LAMarker = new H.map.Marker({ lat: 34.051056, lng: -118.247815 });
+      map.addObject(LAMarker);
+
+      var SFMarker = new H.map.Marker({ lat: 37.788001, lng: -122.405537 });
+      map.addObject(SFMarker);
+
+      var seattleMarker = new H.map.Marker({ lat: 47.610487, lng: -122.338895 });
+      map.addObject(seattleMarker);
+
+      var vancouverMarker = new H.map.Marker({ lat: 49.280448, lng: -123.120983 });
+      map.addObject(vancouverMarker);
+
+      var torontoMarker = new H.map.Marker({ lat: 43.652727, lng: -79.379370 });
+      map.addObject(torontoMarker);
+
+      var anchorageMarker = new H.map.Marker({ lat: 61.218090, lng: -149.890616 });
+      map.addObject(anchorageMarker);
+
+      var denaliMarker = new H.map.Marker({ lat: 63.069207, lng: -151.007756 });
+      map.addObject(denaliMarker);
+    }
+
+
+    /**
+     * Boilerplate map initialization code starts below:
+     */
+
+    //Step 1: initialize communication with the platform
+    var platform = new H.service.Platform({
+      app_id: 'devportal-demo-20180625',
+      app_code: '9v2BkviRwi9Ot26kp2IysQ',
+      useHTTPS: true
+    });
+    var pixelRatio = window.devicePixelRatio || 1;
+    var defaultLayers = platform.createDefaultLayers({
+      tileSize: pixelRatio === 1 ? 256 : 512,
+      ppi: pixelRatio === 1 ? undefined : 320
+    });
+
+    //Step 2: initialize a map - this map is centered over Europe
+    var map = new H.Map(document.getElementById('map'),
+      defaultLayers.normal.map, {
+        center: { lat: 25, lng: 0 },
+        zoom: 2,
+        pixelRatio: pixelRatio
+      });
+
+    //Step 3: make the map interactive
+    // MapEvents enables the event system
+    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+    // Create the default UI components
+    var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+    // Now use the map as required...
+    addMarkersToMap(map);
+  </script>
+
+  <!-- Connect With me text -->
+  <section class="connect_with_me_container">
+    <div class="Connect_with_me">
+      <h1 class="Connect_with_me_text">
+        <span class="end-letters">Connect with me on </span>
+        <span class="middle-letters">Facebook</span><span class="alternate-middle-letters">Linkedin</span><span
+          class="alternate-middle-letters1">Github</span><span class="alternate-middle-letters2">Instagram</span><span
+          class="alternate-middle-letters3">Medium</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- Social Buttons-->
+  <footer class="social_container">
+    <div class="row">
       <ul class="span text-center">
         <li>
           <a href="https://www.facebook.com/alan.lee.39794">
