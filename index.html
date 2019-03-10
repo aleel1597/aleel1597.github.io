@@ -11,6 +11,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
   <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
@@ -25,13 +26,15 @@
   <!-- CSS Includes -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/Menu.css">
-  <link rel="stylesheet" type="text/css" href="css/Brand.css">
+  <link rel="stylesheet" type="text/css" href="css/HobbiesIntro.css">
   <link rel="stylesheet" type="text/css" href="css/Social.css">
   <link rel="stylesheet" type="text/css" href="css/ConnectWIthMe.css">
   <link rel="stylesheet" type="text/css" href="css/Firstcard.css">
   <link rel="stylesheet" type="text/css" href="css/MyTravel.css">
   <link rel="stylesheet" type="text/css" href="css/Timeline.css">
   <link rel="stylesheet" type="text/css" href="css/Map.css">
+  <link rel="stylesheet" type="text/css" href="css/Hobbies.css">
+
 
 </head>
 
@@ -39,11 +42,22 @@
 
   <!-- Menu -->
   <ul class="tab-bar">
-    <li data-num="1" class="tab wave dark">HOME</li>
-    <li data-num="2" class="tab wave dark">TIMELINE</li>
-    <li data-num="3" class="tab wave dark">TRAVELS</li>
-    <li data-num="4" class="tab wave dark">HOBBIES</li>
-    <li data-num="5" class="tab wave dark">RESUME</li>
+    <a href="https://www.alanlee.me">
+      <li data-num="1" class="tab wave dark">HOME</li>
+    </a>
+    <a href="#Hobbies">
+      <li data-num="2" class="tab wave dark">HOBBIES</li>
+    </a>
+    <a href="#Timeline">
+      <li data-num="3" class="tab wave dark">TIMELINE</li>
+    </a>
+    <a href="#Travels">
+      <li data-num="4" class="tab wave dark">TRAVELS</li>
+    </a>
+    <a href="/html/AlanResume.html">
+      <li data-num="5" class="button tab wave dark">RESUME</li>
+    </a>
+
     <div class="indicator"></div>
   </ul>
   <script type="text/javascript">
@@ -86,6 +100,7 @@
 
       <!-- Card -->
       <div class="cardwrapper blue-hover">
+
         <div class="me-img">
           <img src="images/me.jpg" height="520" width="400">
         </div>
@@ -109,75 +124,246 @@
 
       </div>
 
+    </div>
+
+  </section>
 
 
+  <!-- Social Buttons-->
+  <footer class="social_container">
+    <div class="row">
+      <ul class="span text-center">
+        <li>
+          <a href="https://www.facebook.com/alan.lee.39794">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <span> - Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/alanlee9715/">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <span> - Linkedin</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/aleel1597">
+            <i class="fa fa-github-square" aria-hidden="true"></i>
+            <span> - Github</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/alan.lee97/?hl=en">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <span> - Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://medium.com/@alanlee_80668">
+            <i class="fa fa-medium" aria-hidden="true"></i>
+            <span> - Medium</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
+  <!-- Hobbies Intro -->
+  <section id="Hobbies" class="hobbies_intro">
+    <div class="content">
+      <div class="content__container">
+        <p class="content__container__text">
+          In my free time, I love
+        </p>
+
+        <ul class="content__container__list">
+          <li class="content__container__list__item">trading</li>
+          <li class="content__container__list__item">coding</li>
+          <li class="content__container__list__item">fitness</li>
+          <li class="content__container__list__item">traveling</li>
+        </ul>
+      </div>
     </div>
   </section>
 
+  <!-- Hobbies -->
+  <div class="site__wrapper">
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="images/investing.png" alt="">
+
+          <div class="card__overlay card__overlay--indigo">
+            <div class="card__overlay-content">
+              <ul class="card__meta">
+              </ul>
+
+              <a href="#0" class="card__title"><i class="fa fa-dollar"></i> - Investing/Personal Finance</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="images/options.png" alt="">
+
+          <div class="card__overlay card__overlay--blue">
+            <div class="card__overlay-content">
+              <ul class="card__meta">
+              </ul>
+
+              <a href="#0" class="card__title"><i class="fa fa-line-chart"></i> - Derivatives Trading</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="images/travel.jpg" alt="">
+
+          <div class="card__overlay card__overlay--indigo">
+            <div class="card__overlay-content">
+              <ul class="card__meta">
+              </ul>
+
+              <a href="#0" class="card__title"><i class="fa fa-plane"></i> - Traveling/Backpacking</a>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="images/fitness.png" alt="">
+
+          <div class="card__overlay card__overlay--indigo">
+            <div class="card__overlay-content">
+              <ul class="card__meta">
+              </ul>
+
+              <a href="#0" class="card__title"><i class="fa fa-heart"></i> - Health, Fitness</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="images/cooking.jpg" alt="">
+
+          <div class="card__overlay card__overlay--blue">
+            <div class="card__overlay-content">
+
+              <a href="#0" class="card__title"><i class="fa fa-spoon"></i> - Cooking</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card__image">
+          <img src="images/coding.png" alt="">
+
+          <div class="card__overlay card__overlay--blue">
+            <div class="card__overlay-content">
+
+              <a href="#0" class="card__title"><i class="fa fa-spoon"></i> - Coding</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Timeline Intro-->
-  <section class="intro">
+  <section id="Timeline" class="intro">
     <div class="container">
       <h1 class="timeline_intro"">My professional life at a glance &darr;</h1>
     </div>
   </section>
 
   <!-- Timeline -->
-  <section class="timeline">
-    <ul>
-      <li>
-        <div>
-          <time>1997</time> Born in Boston MA
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>2003</time> My father bootstraps CareEverywhere, a SaaS B2B medical device operational platform. Funded with a second morgage on our home, taking naps under a desk in our small office was the norm then.
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>2006</time> Our second family startup, Zyno Medical, a drug infusion medical device venture is founded. I am now in third grade, coming to the office regularly to help setup furniture.
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>2012</time> I spend my first summer working full time at Zyno. My involvement within my family's startups becomes real and helping in whatever free time with anything needed becomes the norm.
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>2014</time> A spin off of Zyno, Infutronix is founded and launches its new medical device, the Nimbus ambulatory infusion pump.
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>2015</time> I get my first non family startup internship at Verizon as a UI/UX Intern, High school graduation, and I start college at Univeristy of Illinois at Urbana Champaign
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>2017</time> I start working my first real external job at SIEMENS Healthineers as a Software Engineer Co-Op building software for CT scanners.
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>2018</time> My next job leads me to Blue Cross Blue Shield where I become a mix of a Business Analyst, Prototype Software Engineer, and a Product Manager.
-        </div>
-      </li>
+  <section class=" timeline">
+        <ul>
+          <li>
+            <div>
+              <time>1997</time> Born in Boston MA
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2003</time> My father bootstraps CareEverywhere, a SaaS B2B medical device software platform. Funded
+              with a second morgage on our home, this was when I was introduced to startups.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2006</time> Our second family startup, Zyno Medical, a drug infusion medical device venture is
+              founded. I am now in third grade, coming to the office regularly to help around the office.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2012</time> I spend my first summer working full time at Zyno on the engineering team. My
+              involvement within my family's startups becomes real and helping in whatever free time with anything
+              needed becomes the norm.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2014</time> A spin off of Zyno, Infutronix is founded and launches its new medical device, the
+              Nimbus ambulatory infusion pump.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2015</time> I get my first non family startup internship at Verizon as a UI/UX Intern, High school
+              graduation, and I start college at Univeristy of Illinois at Urbana Champaign
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2017</time> I start working my first real external job at SIEMENS Healthineers as a Software
+              Engineer Co-Op building software for CT scanners.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2018</time> My next job leads me to Blue Cross Blue Shield where I become a mix of a Business
+              Analyst, Prototype Software Engineer, and a Product Manager.
+            </div>
+          </li>
 
-      <li>
-        <div>
-          <time>2019</time> I graduate college from Univeristy of Illinois at Urbana Champaign with a Bachelors in Computer Engineering. I start my new job at IBM as a Technical Solutions Specialist.
-        </div>
-      </li>
-      <li>
-        <div>
-          <time>Beyond</time> More adventure awaits!
-        </div>
-      </li>
-      
-    </ul>
+          <li>
+            <div>
+              <time>2019</time> I graduate from Univeristy of Illinois at Urbana Champaign with a Bachelors in Computer
+              Engineering. I start my new job at IBM as a Technical Solutions Specialist.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Beyond</time> More adventure awaits!
+            </div>
+          </li>
+
+        </ul>
   </section>
   <script type="text/javascript">
     (function () {
@@ -215,15 +401,20 @@
     })();
   </script>
 
+
+
   <!-- My Travels Intro -->
-  <section class="my_travels_section">
+  <section id="Travels" class="my_travels_section">
     <div class="my_travels_div">
       <h1 class="highlight" href="">
         Some of my favorite adventures around the world
       </h1>
-      <p class = "travel_text">
-        Travel is a major facet of my life. A constant goal of mine is to visit places that will expand my worldview. Everytime I visit a new country, I try to gain a larger appreciation for <a class="highlight" href="">diversity</a> of culture.
-      </p>    </div>
+      <p class="travel_text">
+        Travel is a major facet of my life. A constant goal of mine is to visit places that will expand my worldview.
+        Everytime I visit a new country, I try to gain a larger appreciation for <a class="highlight" href="#"
+          onclick="return false;">diversity</a> of culture.
+      </p>
+    </div>
   </section>
 
   <!-- Map -->
@@ -466,47 +657,14 @@
         <span class="middle-letters">Facebook</span><span class="alternate-middle-letters">Linkedin</span><span
           class="alternate-middle-letters1">Github</span><span class="alternate-middle-letters2">Instagram</span><span
           class="alternate-middle-letters3">Medium</span>
+        <span class="end-letters">!</span>
+
       </h1>
     </div>
   </section>
 
-  <!-- Social Buttons-->
-  <footer class="social_container">
-    <div class="row">
-      <ul class="span text-center">
-        <li>
-          <a href="https://www.facebook.com/alan.lee.39794">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <span> - Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/alanlee9715/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            <span> - Linkedin</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/aleel1597">
-            <i class="fa fa-github-square" aria-hidden="true"></i>
-            <span> - Github</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/alan.lee97/?hl=en">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <span> - Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://medium.com/@alanlee_80668">
-            <i class="fa fa-medium" aria-hidden="true"></i>
-            <span> - Medium</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+
+
 
 </body>
 

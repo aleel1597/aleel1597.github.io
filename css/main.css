@@ -31,7 +31,7 @@ body {
     color: #ffffff;
     background-color: #ffffff;
 
-    height: 600px;
+    height: 500px;
     text-shadow: 0.25px 0.25px 0.25px #000000;
     position: relative;
    
@@ -49,37 +49,13 @@ body {
     color: #fff;
   }
   
-  section .row img {
-    margin: 0 0 30px;
-    width: 100%;
-  }
+
+
   
-  .col-md-6 {
-    margin: 0 0 30px;
-  }
-  
-  .btn.btn-primary {
-    border-radius: 2px;
-    border: 0px;
-    color: #fbd1d5;
-    text-shadow: none;
-    background-color: #ffffff;
-  }
-  
-  .btn.btn-primary:hover {
-    color: #ffffff;
-    background-color: #fbd1d5;
-  }
-  
-  .btn-secondary {
-    background-color: #E8DFE0;
-    color: #ffffff;
-    margin: 0 0 30px;
-  }
   
   footer {
     font-size: 12px;
-    padding: 150px 0;
+    padding: 120px 0;
     position: relative;
     color: #b65555;
   }
