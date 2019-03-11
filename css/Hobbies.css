@@ -36,9 +36,9 @@
   .grid {
     float: none;
     width: 100%;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.8em;
   }
   @media screen and (min-width: 40.063em) {
     .grid {

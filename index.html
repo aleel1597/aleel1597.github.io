@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
   <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
   <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
@@ -54,7 +53,7 @@
     <a href="#Travels">
       <li data-num="4" class="tab wave dark">TRAVELS</li>
     </a>
-    <a href="/html/AlanResume.html">
+    <a href="files/Alan_Lee_Resume.pdf">
       <li data-num="5" class="button tab wave dark">RESUME</li>
     </a>
 
@@ -94,40 +93,32 @@
   </script>
 
   <!-- Intro card -->
-  <section class="jumbotron">
 
-    <div class="container">
-
-      <!-- Card -->
-      <div class="cardwrapper blue-hover">
-
-        <div class="me-img">
-          <img src="images/me.jpg" height="520" width="400">
-        </div>
-
-        <div class="me-info">
-          <div class="me-text">
-            <h1>Hi, i'm Alan Lee.</h1>
-            <h2>Nice to meet you!</h2>
-            <h3>I'm a Senior @ UIUC studying Computer Engineering. My areas of interest include product management,
-              software development, startups, venture capital and
-              healthtech. In August 2019, I'll be joining IBM as a Technical Solution Specialist designing
-              proof-of-concepts for their cloud platform.
-            </h3>
-            <div class="contact-me-btn">
-              <button class="r-button ai-element ai-element_padding-all ai-element4">
-                <span class="ai-element__label">Contact Me</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
+  <div class="intro_card_fond"> 
+  <div class="intro_card_card">
+    <div class="intro_card_thumbnail"><img class="intro_card_left" src="images/me.jpg"/></div>
+    <div class="intro_card_right">
+      <h1 class = "intro_card_h1" >My name is Alan, nice to meet you!</h1>
       </div>
+      <div class="intro_card_separator"></div>
+      <p class = "intro_card_p">I'm a senior @ UIUC studying Computer Engineering. Before college, I was raised in the Boston area. 
+          My family is originally from Shanghai and moved to the US before I was born. At UIUC I am a city scholar’s ambassador and was a part of the pilot cohort.
+          In August 2019, I'll be joining IBM as a Technical Solution Specialist designing proof-of-concepts for their cloud platform. Previously, I was working at
+          Blue Cross Blue Shield (2018), SIEMENS Healthineers (2017), and Verizon (2015). I also come from an entrepreneurial family that bootstrapped a few small healthtech 
+          Startups (Zyno medical, CareEverywhere, Infutrionix). My areas of interest include product management, software development, and venture capital.
+      </p>
+      <h6 class = "intro_card_h6">TAIWAN TRIP 2017</h6>
 
+      <ul class = "intro_card_ul">
+          <a href="files/Alan_Lee_Resume.pdf">
+            <li class = "intro_card_li"><i class="fa fa-file fa-2x"></i></li>
+          </a>
+        <a href="mailto:alanlee9715@gmail.com">
+          <li class = "intro_card_li"><i class="fa fa-envelope fa-2x"></i></li>
+        </a>
+      </ul>
     </div>
-
-  </section>
-
+  </div>
 
   <!-- Social Buttons-->
   <footer class="social_container">
@@ -172,14 +163,14 @@
     <div class="content">
       <div class="content__container">
         <p class="content__container__text">
-          In my free time, I love
+          In my free time, I like to
         </p>
 
         <ul class="content__container__list">
-          <li class="content__container__list__item">trading</li>
-          <li class="content__container__list__item">coding</li>
-          <li class="content__container__list__item">fitness</li>
-          <li class="content__container__list__item">traveling</li>
+          <li class="content__container__list__item">trade</li>
+          <li class="content__container__list__item">code</li>
+          <li class="content__container__list__item">exercise</li>
+          <li class="content__container__list__item">travel</li>
         </ul>
       </div>
     </div>
@@ -400,8 +391,6 @@
 
     })();
   </script>
-
-
 
   <!-- My Travels Intro -->
   <section id="Travels" class="my_travels_section">
@@ -662,9 +651,6 @@
       </h1>
     </div>
   </section>
-
-
-
 
 </body>
 
