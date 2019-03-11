@@ -3,17 +3,30 @@
 
 .connect_with_me_container {
   display: flex;
-  background-image: linear-gradient(to bottom right, #6998d6,#dbabf7);
+  background-image: linear-gradient(to bottom right, #5999ec,#8a889c);
   align-items: center;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
+
+
+  height: 250px;
+}
+
+.HAPIM
+{
+  display: inline-block;
+  margin-left: 5%;
   font-size: 40px;
 
-  height: 150px;
 }
 
 .Connect_with_me_text {
   display: inline-block;
+  margin-left: 5%;
+  font-size: 25px;
+  border-top: 2px solid #C3C3C3;
+
+
 }
 
 .Connect_with_me_text .middle-letters, .Connect_with_me_text .end-letters, .Connect_with_me_text .alternate-middle-letters,
@@ -23,9 +36,6 @@
   height: 1.5em;
 }
 
-.Connect_with_me_text .end-letters {
-  color: rgb(1, 28, 146);
-}
 
 .Connect_with_me_text .middle-letters{
   color: #3b5998;
