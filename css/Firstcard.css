@@ -8,10 +8,12 @@
 /* The card */
 .intro_card_card {
   position: relative;
-  height: 425px;
+  height: 475px;
   width: 1000px;
   margin: 75px auto;
   margin-bottom: 20px;
+  margin-top: 40px;
+
   background-color: #FFF;
   -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
@@ -25,7 +27,7 @@
   position: relative;
   left: 30px;
   top: -30px;
-  height: 410px;
+  height: 470px;
   width: 500px;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
@@ -90,7 +92,7 @@
 .intro_card_h6 {
   position: absolute;
   margin-left:5%;
-  margin-bottom: 5%;
+  margin-top: -1%;
   font-size: 2rem;
   color: #C3C3C3;
 }

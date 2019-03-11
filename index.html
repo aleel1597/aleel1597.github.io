@@ -47,11 +47,11 @@
     <a href="#Hobbies">
       <li data-num="2" class="tab wave dark">HOBBIES</li>
     </a>
-    <a href="#Timeline">
-      <li data-num="3" class="tab wave dark">TIMELINE</li>
-    </a>
     <a href="#Travels">
-      <li data-num="4" class="tab wave dark">TRAVELS</li>
+      <li data-num="3" class="tab wave dark">TRAVELS</li>
+    </a>
+    <a href="#Timeline">
+      <li data-num="4" class="tab wave dark">TIMELINE</li>
     </a>
     <a href="files/Alan_Lee_Resume.pdf">
       <li data-num="5" class="button tab wave dark">RESUME</li>
@@ -93,7 +93,6 @@
   </script>
 
   <!-- Intro card -->
-
   <div class="intro_card_fond"> 
   <div class="intro_card_card">
     <div class="intro_card_thumbnail"><img class="intro_card_left" src="images/me.jpg"/></div>
@@ -102,10 +101,11 @@
       </div>
       <div class="intro_card_separator"></div>
       <p class = "intro_card_p">I'm a senior @ UIUC studying Computer Engineering. Before college, I was raised in the Boston area. 
-          My family is originally from Shanghai and moved to the US before I was born. At UIUC I am a city scholar’s ambassador and was a part of the pilot cohort.
-          In August 2019, I'll be joining IBM as a Technical Solution Specialist designing proof-of-concepts for their cloud platform. Previously, I was working at
-          Blue Cross Blue Shield (2018), SIEMENS Healthineers (2017), and Verizon (2015). I also come from an entrepreneurial family that bootstrapped a few small healthtech 
-          Startups (Zyno medical, CareEverywhere, Infutrionix). My areas of interest include product management, software development, and venture capital.
+          My family is originally from Shanghai and moved to the US before I was born.<br><br>Previously, I was working at Blue Cross 
+          Blue Shield (2018), SIEMENS Healthineers (2017), and Verizon (2015). I also come from an entrepreneurial family that bootstrapped
+          a few small healthtech Startups (Zyno medical, CareEverywhere, Infutrionix). <br><br> At UIUC I am a city scholar’s ambassador 
+          and was a part of the pilot cohort. In August 2019, I'll be joining IBM as a Technical Solution Specialist designing proof-of-concepts 
+          for their cloud platform. My areas of interest are in product management, software development, and venture capital.
       </p>
       <h6 class = "intro_card_h6">TAIWAN TRIP 2017</h6>
 
@@ -283,6 +283,252 @@
     </div>
   </div>
 
+    <!-- My Travels Intro -->
+    <section id="Travels" class="my_travels_section">
+      <div class="my_travels_div">
+        <h1 class="highlight" href="">
+          Some of my favorite adventures around the world
+        </h1>
+        <p class="travel_text">
+          Travel is a major facet of my life. A constant goal of mine is to visit places that will expand my worldview.
+          Everytime I visit a new country, I try to gain a larger appreciation for <a class="highlight" href="#"
+            onclick="return false;">diversity</a> of culture.
+        </p>
+      </div>
+    </section>
+  
+    <!-- Map -->
+    <div id="map" style="width: 100%; height: 425px; background: grey"></div>
+    <script type="text/javascript" charset="UTF-8">
+  
+      /**
+       * Adds markers to the map highlighting the locations of the captials of
+       * France, Italy, Germany, Spain and the United Kingdom.
+       *
+       * @param  {H.Map} map      A HERE Map instance within the application
+       */
+      function addMarkersToMap(map) {
+        var parisMarker = new H.map.Marker({ lat: 48.8567, lng: 2.3508 });
+        map.addObject(parisMarker);
+  
+        var romeMarker = new H.map.Marker({ lat: 41.9, lng: 12.5 });
+        map.addObject(romeMarker);
+  
+        var berlinMarker = new H.map.Marker({ lat: 52.5166, lng: 13.3833 });
+        map.addObject(berlinMarker);
+  
+        var madridMarker = new H.map.Marker({ lat: 40.4, lng: -3.6833 });
+        map.addObject(madridMarker);
+  
+        var londonMarker = new H.map.Marker({ lat: 51.5008, lng: -0.1224 });
+        map.addObject(londonMarker);
+  
+        var amsterdamMarker = new H.map.Marker({ lat: 52.371442, lng: 4.896837 });
+        map.addObject(amsterdamMarker);
+  
+        var pragueMarker = new H.map.Marker({ lat: 50.088257, lng: 14.403474 });
+        map.addObject(pragueMarker);
+  
+        var viennaMarker = new H.map.Marker({ lat: 48.208391, lng: 16.372572 });
+        map.addObject(viennaMarker);
+  
+        var veniceMarker = new H.map.Marker({ lat: 45.440467, lng: 12.320520 });
+        map.addObject(veniceMarker);
+  
+        var florenceMarker = new H.map.Marker({ lat: 43.772326, lng: 11.254611 });
+        map.addObject(florenceMarker);
+  
+        var lisbonMarker = new H.map.Marker({ lat: 38.712271, lng: -9.145330 });
+        map.addObject(lisbonMarker);
+  
+        var AlbufeiraMarker = new H.map.Marker({ lat: 37.087798, lng: -8.249083 });
+        map.addObject(AlbufeiraMarker);
+  
+        var granadaMarker = new H.map.Marker({ lat: 37.174854, lng: -3.600292 });
+        map.addObject(granadaMarker);
+  
+        var tanzaniaMarker = new H.map.Marker({ lat: -3.071732, lng: 37.348668 });
+        map.addObject(tanzaniaMarker);
+  
+        var hungaryMarker = new H.map.Marker({ lat: 47.501403, lng: 19.057675 });
+        map.addObject(hungaryMarker);
+  
+        var icelandMarker = new H.map.Marker({ lat: 64.142108, lng: -21.927409 });
+        map.addObject(icelandMarker);
+  
+        var shanghaiMarker = new H.map.Marker({ lat: 31.218439, lng: 121.469693 });
+        map.addObject(shanghaiMarker);
+  
+        var beijingMarker = new H.map.Marker({ lat: 39.915662, lng: 116.396972 });
+        map.addObject(beijingMarker);
+  
+        var guilinMarker = new H.map.Marker({ lat: 25.272194, lng: 110.292077 });
+        map.addObject(guilinMarker);
+  
+        var xianMarker = new H.map.Marker({ lat: 34.285346, lng: 108.964471 });
+        map.addObject(xianMarker);
+  
+        var bangkokMarker = new H.map.Marker({ lat: 13.745698, lng: 100.540430 });
+        map.addObject(bangkokMarker);
+  
+        var taipeiMarker = new H.map.Marker({ lat: 25.039409, lng: 121.517900 });
+        map.addObject(taipeiMarker);
+  
+        var khaosiungMarker = new H.map.Marker({ lat: 22.623352, lng: 120.301308 });
+        map.addObject(khaosiungMarker);
+  
+        var tokyoMarker = new H.map.Marker({ lat: 35.669945, lng: 139.763695 });
+        map.addObject(tokyoMarker);
+  
+        var osakaMarker = new H.map.Marker({ lat: 34.693849, lng: 135.496777 });
+        map.addObject(osakaMarker);
+  
+        var sydneyMarker = new H.map.Marker({ lat: -33.858712, lng: 151.207143 });
+        map.addObject(sydneyMarker);
+  
+        var melbourneMarker = new H.map.Marker({ lat: -37.823792, lng: 144.958726 });
+        map.addObject(melbourneMarker);
+  
+        var brisbaneMarker = new H.map.Marker({ lat: -27.455769, lng: 153.039290 });
+        map.addObject(brisbaneMarker);
+  
+        var auckalndMarker = new H.map.Marker({ lat: -36.858382, lng: 174.759596 });
+        map.addObject(auckalndMarker);
+  
+        var christchruchMarker = new H.map.Marker({ lat: -43.535690, lng: 172.637083 });
+        map.addObject(christchruchMarker);
+  
+        var queenstownMarker = new H.map.Marker({ lat: -45.03225, lng: 168.660501 });
+        map.addObject(queenstownMarker);
+  
+        var sanjoseMarker = new H.map.Marker({ lat: 9.933383, lng: -84.081681 });
+        map.addObject(sanjoseMarker);
+  
+        var montegobayMarker = new H.map.Marker({ lat: 18.471621, lng: -77.922979 });
+        map.addObject(montegobayMarker);
+  
+        var sanjuanMarker = new H.map.Marker({ lat: 18.449166, lng: -66.081055 });
+        map.addObject(sanjuanMarker);
+  
+        var martiniqueMarker = new H.map.Marker({ lat: 14.606333, lng: -61.070771 });
+        map.addObject(martiniqueMarker);
+  
+        var nassauMarker = new H.map.Marker({ lat: 25.070129, lng: -77.343523 });
+        map.addObject(nassauMarker);
+  
+        var miamiMarker = new H.map.Marker({ lat: 25.777713, lng: -80.191005 });
+        map.addObject(miamiMarker);
+  
+        var nashvilleMarker = new H.map.Marker({ lat: 36.163887, lng: -86.778551 });
+        map.addObject(nashvilleMarker);
+  
+        var DCMarker = new H.map.Marker({ lat: 38.902448, lng: -77.036524 });
+        map.addObject(DCMarker);
+  
+        var NYCMarker = new H.map.Marker({ lat: 40.725136, lng: -73.995264 });
+        map.addObject(NYCMarker);
+  
+        var bostonMarker = new H.map.Marker({ lat: 42.360137, lng: -71.055271 });
+        map.addObject(bostonMarker);
+  
+        var burlingtonMarker = new H.map.Marker({ lat: 44.477636, lng: -73.215845 });
+        map.addObject(burlingtonMarker);
+  
+        var barharborMarker = new H.map.Marker({ lat: 44.389764, lng: -68.204725 });
+        map.addObject(barharborMarker);
+  
+        var montrealMarker = new H.map.Marker({ lat: 45.499893, lng: -73.574707 });
+        map.addObject(montrealMarker);
+  
+        var gunstockMarker = new H.map.Marker({ lat: 43.547775, lng: -71.406832 });
+        map.addObject(gunstockMarker);
+  
+        var champgainMarker = new H.map.Marker({ lat: 40.110407, lng: -88.231489 });
+        map.addObject(champgainMarker);
+  
+        var chicagoMarker = new H.map.Marker({ lat: 41.893758, lng: -87.623723 });
+        map.addObject(chicagoMarker);
+  
+        var stlousMarker = new H.map.Marker({ lat: 38.630550, lng: -90.194820 });
+        map.addObject(stlousMarker);
+  
+        var yellowstoneMarker = new H.map.Marker({ lat: 44.414069, lng: -110.578669 });
+        map.addObject(yellowstoneMarker);
+  
+        var saltlakeMarker = new H.map.Marker({ lat: 40.765367, lng: -111.894749 });
+        map.addObject(saltlakeMarker);
+  
+        var pheonixMarker = new H.map.Marker({ lat: 33.434245, lng: -112.092680 });
+        map.addObject(pheonixMarker);
+  
+        var grandcanyonMarker = new H.map.Marker({ lat: 36.050504, lng: -112.105224 });
+        map.addObject(grandcanyonMarker);
+  
+        var lasvegasMarker = new H.map.Marker({ lat: 36.173856, lng: -115.148497 });
+        map.addObject(lasvegasMarker);
+  
+        var sandiegoMarker = new H.map.Marker({ lat: 32.713696, lng: -117.160990 });
+        map.addObject(sandiegoMarker);
+  
+        var LAMarker = new H.map.Marker({ lat: 34.051056, lng: -118.247815 });
+        map.addObject(LAMarker);
+  
+        var SFMarker = new H.map.Marker({ lat: 37.788001, lng: -122.405537 });
+        map.addObject(SFMarker);
+  
+        var seattleMarker = new H.map.Marker({ lat: 47.610487, lng: -122.338895 });
+        map.addObject(seattleMarker);
+  
+        var vancouverMarker = new H.map.Marker({ lat: 49.280448, lng: -123.120983 });
+        map.addObject(vancouverMarker);
+  
+        var torontoMarker = new H.map.Marker({ lat: 43.652727, lng: -79.379370 });
+        map.addObject(torontoMarker);
+  
+        var anchorageMarker = new H.map.Marker({ lat: 61.218090, lng: -149.890616 });
+        map.addObject(anchorageMarker);
+  
+        var denaliMarker = new H.map.Marker({ lat: 63.069207, lng: -151.007756 });
+        map.addObject(denaliMarker);
+      }
+  
+  
+      /**
+       * Boilerplate map initialization code starts below:
+       */
+  
+      //Step 1: initialize communication with the platform
+      var platform = new H.service.Platform({
+        app_id: 'devportal-demo-20180625',
+        app_code: '9v2BkviRwi9Ot26kp2IysQ',
+        useHTTPS: true
+      });
+      var pixelRatio = window.devicePixelRatio || 1;
+      var defaultLayers = platform.createDefaultLayers({
+        tileSize: pixelRatio === 1 ? 256 : 512,
+        ppi: pixelRatio === 1 ? undefined : 320
+      });
+  
+      //Step 2: initialize a map - this map is centered over Europe
+      var map = new H.Map(document.getElementById('map'),
+        defaultLayers.normal.map, {
+          center: { lat: 25, lng: 0 },
+          zoom: 2,
+          pixelRatio: pixelRatio
+        });
+  
+      //Step 3: make the map interactive
+      // MapEvents enables the event system
+      // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+      var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+  
+      // Create the default UI components
+      var ui = H.ui.UI.createDefault(map, defaultLayers);
+  
+      // Now use the map as required...
+      addMarkersToMap(map);
+    </script>
+
   <!-- Timeline Intro-->
   <section id="Timeline" class="intro">
     <div class="container">
@@ -390,252 +636,6 @@
       window.addEventListener("scroll", callbackFunc);
 
     })();
-  </script>
-
-  <!-- My Travels Intro -->
-  <section id="Travels" class="my_travels_section">
-    <div class="my_travels_div">
-      <h1 class="highlight" href="">
-        Some of my favorite adventures around the world
-      </h1>
-      <p class="travel_text">
-        Travel is a major facet of my life. A constant goal of mine is to visit places that will expand my worldview.
-        Everytime I visit a new country, I try to gain a larger appreciation for <a class="highlight" href="#"
-          onclick="return false;">diversity</a> of culture.
-      </p>
-    </div>
-  </section>
-
-  <!-- Map -->
-  <div id="map" style="width: 100%; height: 450px; background: grey"></div>
-  <script type="text/javascript" charset="UTF-8">
-
-    /**
-     * Adds markers to the map highlighting the locations of the captials of
-     * France, Italy, Germany, Spain and the United Kingdom.
-     *
-     * @param  {H.Map} map      A HERE Map instance within the application
-     */
-    function addMarkersToMap(map) {
-      var parisMarker = new H.map.Marker({ lat: 48.8567, lng: 2.3508 });
-      map.addObject(parisMarker);
-
-      var romeMarker = new H.map.Marker({ lat: 41.9, lng: 12.5 });
-      map.addObject(romeMarker);
-
-      var berlinMarker = new H.map.Marker({ lat: 52.5166, lng: 13.3833 });
-      map.addObject(berlinMarker);
-
-      var madridMarker = new H.map.Marker({ lat: 40.4, lng: -3.6833 });
-      map.addObject(madridMarker);
-
-      var londonMarker = new H.map.Marker({ lat: 51.5008, lng: -0.1224 });
-      map.addObject(londonMarker);
-
-      var amsterdamMarker = new H.map.Marker({ lat: 52.371442, lng: 4.896837 });
-      map.addObject(amsterdamMarker);
-
-      var pragueMarker = new H.map.Marker({ lat: 50.088257, lng: 14.403474 });
-      map.addObject(pragueMarker);
-
-      var viennaMarker = new H.map.Marker({ lat: 48.208391, lng: 16.372572 });
-      map.addObject(viennaMarker);
-
-      var veniceMarker = new H.map.Marker({ lat: 45.440467, lng: 12.320520 });
-      map.addObject(veniceMarker);
-
-      var florenceMarker = new H.map.Marker({ lat: 43.772326, lng: 11.254611 });
-      map.addObject(florenceMarker);
-
-      var lisbonMarker = new H.map.Marker({ lat: 38.712271, lng: -9.145330 });
-      map.addObject(lisbonMarker);
-
-      var AlbufeiraMarker = new H.map.Marker({ lat: 37.087798, lng: -8.249083 });
-      map.addObject(AlbufeiraMarker);
-
-      var granadaMarker = new H.map.Marker({ lat: 37.174854, lng: -3.600292 });
-      map.addObject(granadaMarker);
-
-      var tanzaniaMarker = new H.map.Marker({ lat: -3.071732, lng: 37.348668 });
-      map.addObject(tanzaniaMarker);
-
-      var hungaryMarker = new H.map.Marker({ lat: 47.501403, lng: 19.057675 });
-      map.addObject(hungaryMarker);
-
-      var icelandMarker = new H.map.Marker({ lat: 64.142108, lng: -21.927409 });
-      map.addObject(icelandMarker);
-
-      var shanghaiMarker = new H.map.Marker({ lat: 31.218439, lng: 121.469693 });
-      map.addObject(shanghaiMarker);
-
-      var beijingMarker = new H.map.Marker({ lat: 39.915662, lng: 116.396972 });
-      map.addObject(beijingMarker);
-
-      var guilinMarker = new H.map.Marker({ lat: 25.272194, lng: 110.292077 });
-      map.addObject(guilinMarker);
-
-      var xianMarker = new H.map.Marker({ lat: 34.285346, lng: 108.964471 });
-      map.addObject(xianMarker);
-
-      var bangkokMarker = new H.map.Marker({ lat: 13.745698, lng: 100.540430 });
-      map.addObject(bangkokMarker);
-
-      var taipeiMarker = new H.map.Marker({ lat: 25.039409, lng: 121.517900 });
-      map.addObject(taipeiMarker);
-
-      var khaosiungMarker = new H.map.Marker({ lat: 22.623352, lng: 120.301308 });
-      map.addObject(khaosiungMarker);
-
-      var tokyoMarker = new H.map.Marker({ lat: 35.669945, lng: 139.763695 });
-      map.addObject(tokyoMarker);
-
-      var osakaMarker = new H.map.Marker({ lat: 34.693849, lng: 135.496777 });
-      map.addObject(osakaMarker);
-
-      var sydneyMarker = new H.map.Marker({ lat: -33.858712, lng: 151.207143 });
-      map.addObject(sydneyMarker);
-
-      var melbourneMarker = new H.map.Marker({ lat: -37.823792, lng: 144.958726 });
-      map.addObject(melbourneMarker);
-
-      var brisbaneMarker = new H.map.Marker({ lat: -27.455769, lng: 153.039290 });
-      map.addObject(brisbaneMarker);
-
-      var auckalndMarker = new H.map.Marker({ lat: -36.858382, lng: 174.759596 });
-      map.addObject(auckalndMarker);
-
-      var christchruchMarker = new H.map.Marker({ lat: -43.535690, lng: 172.637083 });
-      map.addObject(christchruchMarker);
-
-      var queenstownMarker = new H.map.Marker({ lat: -45.03225, lng: 168.660501 });
-      map.addObject(queenstownMarker);
-
-      var sanjoseMarker = new H.map.Marker({ lat: 9.933383, lng: -84.081681 });
-      map.addObject(sanjoseMarker);
-
-      var montegobayMarker = new H.map.Marker({ lat: 18.471621, lng: -77.922979 });
-      map.addObject(montegobayMarker);
-
-      var sanjuanMarker = new H.map.Marker({ lat: 18.449166, lng: -66.081055 });
-      map.addObject(sanjuanMarker);
-
-      var martiniqueMarker = new H.map.Marker({ lat: 14.606333, lng: -61.070771 });
-      map.addObject(martiniqueMarker);
-
-      var nassauMarker = new H.map.Marker({ lat: 25.070129, lng: -77.343523 });
-      map.addObject(nassauMarker);
-
-      var miamiMarker = new H.map.Marker({ lat: 25.777713, lng: -80.191005 });
-      map.addObject(miamiMarker);
-
-      var nashvilleMarker = new H.map.Marker({ lat: 36.163887, lng: -86.778551 });
-      map.addObject(nashvilleMarker);
-
-      var DCMarker = new H.map.Marker({ lat: 38.902448, lng: -77.036524 });
-      map.addObject(DCMarker);
-
-      var NYCMarker = new H.map.Marker({ lat: 40.725136, lng: -73.995264 });
-      map.addObject(NYCMarker);
-
-      var bostonMarker = new H.map.Marker({ lat: 42.360137, lng: -71.055271 });
-      map.addObject(bostonMarker);
-
-      var burlingtonMarker = new H.map.Marker({ lat: 44.477636, lng: -73.215845 });
-      map.addObject(burlingtonMarker);
-
-      var barharborMarker = new H.map.Marker({ lat: 44.389764, lng: -68.204725 });
-      map.addObject(barharborMarker);
-
-      var montrealMarker = new H.map.Marker({ lat: 45.499893, lng: -73.574707 });
-      map.addObject(montrealMarker);
-
-      var gunstockMarker = new H.map.Marker({ lat: 43.547775, lng: -71.406832 });
-      map.addObject(gunstockMarker);
-
-      var champgainMarker = new H.map.Marker({ lat: 40.110407, lng: -88.231489 });
-      map.addObject(champgainMarker);
-
-      var chicagoMarker = new H.map.Marker({ lat: 41.893758, lng: -87.623723 });
-      map.addObject(chicagoMarker);
-
-      var stlousMarker = new H.map.Marker({ lat: 38.630550, lng: -90.194820 });
-      map.addObject(stlousMarker);
-
-      var yellowstoneMarker = new H.map.Marker({ lat: 44.414069, lng: -110.578669 });
-      map.addObject(yellowstoneMarker);
-
-      var saltlakeMarker = new H.map.Marker({ lat: 40.765367, lng: -111.894749 });
-      map.addObject(saltlakeMarker);
-
-      var pheonixMarker = new H.map.Marker({ lat: 33.434245, lng: -112.092680 });
-      map.addObject(pheonixMarker);
-
-      var grandcanyonMarker = new H.map.Marker({ lat: 36.050504, lng: -112.105224 });
-      map.addObject(grandcanyonMarker);
-
-      var lasvegasMarker = new H.map.Marker({ lat: 36.173856, lng: -115.148497 });
-      map.addObject(lasvegasMarker);
-
-      var sandiegoMarker = new H.map.Marker({ lat: 32.713696, lng: -117.160990 });
-      map.addObject(sandiegoMarker);
-
-      var LAMarker = new H.map.Marker({ lat: 34.051056, lng: -118.247815 });
-      map.addObject(LAMarker);
-
-      var SFMarker = new H.map.Marker({ lat: 37.788001, lng: -122.405537 });
-      map.addObject(SFMarker);
-
-      var seattleMarker = new H.map.Marker({ lat: 47.610487, lng: -122.338895 });
-      map.addObject(seattleMarker);
-
-      var vancouverMarker = new H.map.Marker({ lat: 49.280448, lng: -123.120983 });
-      map.addObject(vancouverMarker);
-
-      var torontoMarker = new H.map.Marker({ lat: 43.652727, lng: -79.379370 });
-      map.addObject(torontoMarker);
-
-      var anchorageMarker = new H.map.Marker({ lat: 61.218090, lng: -149.890616 });
-      map.addObject(anchorageMarker);
-
-      var denaliMarker = new H.map.Marker({ lat: 63.069207, lng: -151.007756 });
-      map.addObject(denaliMarker);
-    }
-
-
-    /**
-     * Boilerplate map initialization code starts below:
-     */
-
-    //Step 1: initialize communication with the platform
-    var platform = new H.service.Platform({
-      app_id: 'devportal-demo-20180625',
-      app_code: '9v2BkviRwi9Ot26kp2IysQ',
-      useHTTPS: true
-    });
-    var pixelRatio = window.devicePixelRatio || 1;
-    var defaultLayers = platform.createDefaultLayers({
-      tileSize: pixelRatio === 1 ? 256 : 512,
-      ppi: pixelRatio === 1 ? undefined : 320
-    });
-
-    //Step 2: initialize a map - this map is centered over Europe
-    var map = new H.Map(document.getElementById('map'),
-      defaultLayers.normal.map, {
-        center: { lat: 25, lng: 0 },
-        zoom: 2,
-        pixelRatio: pixelRatio
-      });
-
-    //Step 3: make the map interactive
-    // MapEvents enables the event system
-    // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
-    var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-
-    // Create the default UI components
-    var ui = H.ui.UI.createDefault(map, defaultLayers);
-
-    // Now use the map as required...
-    addMarkersToMap(map);
   </script>
 
   <!-- Connect With me text -->

@@ -1,9 +1,9 @@
 .my_travels_section {
-  background-color: #090F1A;
+  background-color: rgb(255, 255, 255);
 }
 
 .my_travels_section {
-  color: #FFF;
+  color: rgb(128, 128, 128);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,7 +43,7 @@
 }
 .travel_text a {
   text-decoration: none;
-  color: #FF5873;
+  color: rgb(0, 91, 151);
   font-weight: 700;
 
   font-size: 1.1em;
@@ -56,7 +56,7 @@
 }
 
 .highlight:hover {
-  background: -webkit-linear-gradient(25deg, #FFB281, #F45580);
+  background: -webkit-linear-gradient(25deg, rgb(0, 170, 57), rgb(0, 143, 187));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
