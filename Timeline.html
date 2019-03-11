@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html ng-app="ngMap">
+
+<head>
+  <title>Alan Lee</title>
+  <meta charset="utf-8" />
+
+  <!-- Online Includes -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+  <!-- tab icon -->
+  <link rel="icon" href="images/methumbnail.jpg">
+
+  <!-- CSS Includes -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/Menu.css">
+  <link rel="stylesheet" type="text/css" href="css/HobbiesIntro.css">
+  <link rel="stylesheet" type="text/css" href="css/Social.css">
+  <link rel="stylesheet" type="text/css" href="css/ConnectWIthMe.css">
+  <link rel="stylesheet" type="text/css" href="css/Firstcard.css">
+  <link rel="stylesheet" type="text/css" href="css/MyTravel.css">
+  <link rel="stylesheet" type="text/css" href="css/Timeline.css">
+  <link rel="stylesheet" type="text/css" href="css/Map.css">
+  <link rel="stylesheet" type="text/css" href="css/Hobbies.css">
+
+
+</head>
+
+<body>
+
+  <!-- Menu -->
+  <ul class="tab-bar">
+    <a href="https://www.alanlee.me">
+      <li data-num="1" class="tab wave dark">HOME</li>
+    </a>
+    <a href="Hobbies.html">
+      <li data-num="2" class="tab wave dark">HOBBIES</li>
+    </a>
+    <a href="Travels.html">
+      <li data-num="3" class="tab wave dark">TRAVELS</li>
+    </a>
+    <a href="Timeline.html">
+      <li data-num="4" class="tab wave dark">TIMELINE</li>
+    </a>
+    <a href="files/Alan_Lee_Resume.pdf">
+      <li data-num="5" class="button tab wave dark">RESUME</li>
+    </a>
+
+    <div class="indicator4"></div>
+  </ul>
+  <script type="text/javascript">
+    var waveBtn = (function () {
+      'use strict';
+      var btn = document.querySelectorAll('.wave'),
+        tab = document.querySelector('.tab-bar'),
+        indicator = document.querySelector('.indicator'),
+        indi = 0;
+      indicator.style.marginLeft = indi + 'px';
+
+      for (var i = 0; i < btn.length; i++) {
+        btn[i].onmousedown = function (e) {
+          var newRound = document.createElement('div'), x, y;
+
+          newRound.className = 'cercle';
+          this.appendChild(newRound);
+
+          x = e.pageX - this.offsetLeft;
+          y = e.pageY - this.offsetTop;
+
+          newRound.style.left = x + "px";
+          newRound.style.top = y + "px";
+          newRound.className += " anim";
+
+          indicator.style.marginLeft = indi + (this.dataset.num - 1) * 150 + 'px';
+
+          setTimeout(function () {
+            newRound.remove();
+          }, 1200);
+        };
+      }
+    }());
+  </script>
+
+  <!-- Timeline Intro-->
+  <section id="Timeline" class="intro">
+    <div class="container">
+      <h1 class="timeline_intro"">My professional life at a glance &darr;</h1>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class=" timeline">
+        <ul>
+          <li>
+            <div>
+              <time>1997</time> Born in Boston MA
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2003</time> My father bootstraps CareEverywhere, a SaaS B2B medical device software platform. Funded
+              with a second morgage on our home, this was when I was introduced to startups.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2006</time> Our second family startup, Zyno Medical, a drug infusion medical device venture is
+              founded. I am now in third grade, coming to the office regularly to help around the office.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2012</time> I spend my first summer working full time at Zyno on the engineering team. My
+              involvement within my family's startups becomes real and helping in whatever free time with anything
+              needed becomes the norm.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2014</time> A spin off of Zyno, Infutronix is founded and launches its new medical device, the
+              Nimbus ambulatory infusion pump.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2015</time> I get my first non family startup internship at Verizon as a UI/UX Intern, High school
+              graduation, and I start college at Univeristy of Illinois at Urbana Champaign
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2017</time> I start working my first real external job at SIEMENS Healthineers as a Software
+              Engineer Co-Op building software for CT scanners.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>2018</time> My next job leads me to Blue Cross Blue Shield where I become a mix of a Business
+              Analyst, Prototype Software Engineer, and a Product Manager.
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <time>2019</time> I graduate from Univeristy of Illinois at Urbana Champaign with a Bachelors in Computer
+              Engineering. I start my new job at IBM as a Technical Solutions Specialist.
+            </div>
+          </li>
+          <li>
+            <div>
+              <time>Beyond</time> More adventure awaits!
+            </div>
+          </li>
+
+        </ul>
+  </section>
+  <script type="text/javascript">
+    (function () {
+
+      'use strict';
+
+      // define variables
+      var items = document.querySelectorAll(".timeline li");
+
+      // check if an element is in viewport
+      // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            items[i].classList.add("in-view");
+          }
+        }
+      }
+
+      // listen for events
+      window.addEventListener("load", callbackFunc);
+      window.addEventListener("resize", callbackFunc);
+      window.addEventListener("scroll", callbackFunc);
+
+    })();
+  </script>
+
+</body>
+
+</html>
