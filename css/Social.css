@@ -1,11 +1,10 @@
 
   
   footer {
-    font-size: 12px;
-    padding: 120px 50%;
+    padding: 10% 50%;
     position: relative;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 3%;
   }
 
   footer ul {
@@ -17,7 +16,7 @@
   
   footer ul li {
     list-style:none;
-    margin:0 5px;
+    margin:0 1%;
     display: left;
     position: relative;
   }
@@ -25,7 +24,7 @@
   footer ul li a .fa {
     font-size: 40px;
     color: #262626;
-    line-height:80px;
+    line-height: 200%;
     transition: .5s;
     padding-right: 14px;
   }
@@ -34,7 +33,7 @@
     padding:0;
     margin:0;
     position:absolute;
-    top: 30px;
+    top: 40%;
     color: #262626;
     letter-spacing: 4px;
     transition: .5s;
@@ -44,7 +43,7 @@
     text-decoration: none;
     display:absolute;
     display:block;
-    width:210px;
+    width:210px ;
     height:80px;
     background: #fff;
     text-align:left;

@@ -8,9 +8,10 @@
 /* The card */
 .intro_card_card {
   position: relative;
-  height: 475px;
-  width: 1000px;
-  margin: 75px auto;
+  height: 71vh;
+  width:70%;
+  max-width: 70%;
+  margin: 10% auto;
   margin-bottom: 20px;
   margin-top: 40px;
 
@@ -25,10 +26,10 @@
 .intro_card_thumbnail {
   float: left;
   position: relative;
-  left: 30px;
-  top: -30px;
-  height: 470px;
-  width: 500px;
+  left: 3%;
+  margin-top: -3%;
+  height: 70vh;
+  width: 50%;
   -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
@@ -56,14 +57,17 @@
 
 .intro_card_h1 {
   padding-top: 15px;
-  font-size: 25px;
+  margin-right: 3%;
+  margin-left: 0%;
+
+  font-size: 3vw;
   color: #4B4B4B;
 }
 
 .intro_card_separator {
-  margin-top: 10px;
+  margin-top: 1%;
   margin-left:55%;
-  margin-right:20px;
+  margin-right: 3%;
 
   border: 1px solid #C3C3C3;
 }
@@ -71,10 +75,10 @@
 .intro_card_p {
   text-align: justify;
   margin-left:55%;
-  margin-right: 20px;
+  margin-right: 3%;
 
-  padding-top: 10px;
-  font-size: 15.5px;
+  padding-top: 1%;
+  font-size: 1vw;
   line-height: 150%;
   color: #4B4B4B;
 }
@@ -93,6 +97,6 @@
   position: absolute;
   margin-left:5%;
   margin-top: -1%;
-  font-size: 2rem;
+  font-size: 1vw;
   color: #C3C3C3;
 }

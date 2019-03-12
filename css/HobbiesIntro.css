@@ -9,12 +9,17 @@
     position: absolute;
     top: 60%;
     left: 50%;
+
+    width: 40%;
+
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     height: 50%;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
-    font-size: 35px;
+
+    font-size:2vw;
+
     line-height: 40px;
     color: #808080;
   }
@@ -37,7 +42,9 @@
     position: absolute;
     top: 0;
     color: #16a085;
-    font-size: 40px;
+
+    font-size:2vw;
+
     line-height: 40px;
     -webkit-animation-name: opacity;
     -webkit-animation-duration: 2s;
@@ -53,7 +60,12 @@
   }
   .content__container__list {
     margin-top: 0;
-    padding-left: 390px;
+    width: 40%;
+    font-size:2vw;
+    margin-left: 75%;
+    margin-right: 25%;
+
+
     text-align: left;
     list-style: none;
     -webkit-animation-name: change;
@@ -64,8 +76,10 @@
     animation-iteration-count: infinite;
   }
   .content__container__list__item {
+
+
     line-height: 40px;
-    margin: 0;
+
   }
   
   @-webkit-keyframes opacity {
