@@ -1,662 +1,363 @@
 <!DOCTYPE html>
-<html ng-app="ngMap">
-
+<html  >
 <head>
-  <title>Alan Lee</title>
-  <meta charset="utf-8" />
-
-  <!-- Online Includes -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1549984893" />
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
-  <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
-
-  <!-- tab icon -->
-  <link rel="icon" href="images/methumbnail.jpg">
-
-  <!-- CSS Includes -->
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/Menu.css">
-  <link rel="stylesheet" type="text/css" href="css/HobbiesIntro.css">
-  <link rel="stylesheet" type="text/css" href="css/Social.css">
-  <link rel="stylesheet" type="text/css" href="css/ConnectWIthMe.css">
-  <link rel="stylesheet" type="text/css" href="css/Firstcard.css">
-  <link rel="stylesheet" type="text/css" href="css/MyTravel.css">
-  <link rel="stylesheet" type="text/css" href="css/Timeline.css">
-  <link rel="stylesheet" type="text/css" href="css/Map.css">
-  <link rel="stylesheet" type="text/css" href="css/Hobbies.css">
-
-
+  <!-- Site made with Mobirise Website Builder v4.10.10, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.10.10, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/images-removebg-preview-200x200.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  <title>Home</title>
+  <link rel="preload" as="style" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+<link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="preload" as="style" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="preload" as="style" href="assets/bootstrap/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="preload" as="style" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
 </head>
-
 <body>
+  <section class="menu cid-rGNerfiRHM" once="menu" id="menu2-0">
 
-  <!-- Menu -->
-  <ul class="tab-bar">
-    <a href="https://www.alanlee.me">
-      <li data-num="1" class="tab wave dark">HOME</li>
-    </a>
-    <a href="Hobbies.html">
-      <li data-num="2" class="tab wave dark">HOBBIES</li>
-    </a>
-    <a href="Travels.html">
-      <li data-num="3" class="tab wave dark">TRAVELS</li>
-    </a>
-    <a href="Timeline.html">
-      <li data-num="4" class="tab wave dark">TIMELINE</li>
-    </a>
-    <a href="files/Alan_Lee_Resume.pdf">
-      <li data-num="5" class="button tab wave dark">RESUME</li>
-    </a>
+    
 
-    <div class="indicator1"></div>
-  </ul>
-  <script type="text/javascript">
-    var waveBtn = (function () {
-      'use strict';
-      var btn = document.querySelectorAll('.wave'),
-        tab = document.querySelector('.tab-bar'),
-        indicator = document.querySelector('.indicator'),
-        indi = 0;
-      indicator.style.marginLeft = indi + 'px';
-
-      for (var i = 0; i < btn.length; i++) {
-        btn[i].onmousedown = function (e) {
-          var newRound = document.createElement('div'), x, y;
-
-          newRound.className = 'cercle';
-          this.appendChild(newRound);
-
-          x = e.pageX - this.offsetLeft;
-          y = e.pageY - this.offsetTop;
-
-          newRound.style.left = x + "px";
-          newRound.style.top = y + "px";
-          newRound.className += " anim";
-
-          indicator.style.marginLeft = indi + (this.dataset.num - 1) * 150 + 'px';
-
-          setTimeout(function () {
-            newRound.remove();
-          }, 1200);
-        };
-      }
-    }());
-  </script>
-
-  <!-- Intro card -->
-  <div class="intro_card_fond"> 
-  <div class="intro_card_card">
-    <div class="intro_card_thumbnail"><img class="intro_card_left" src="images/me.jpg"/></div>
-    <div class="intro_card_right">
-      <h1 class = "intro_card_h1" >My name is Alan, nice to meet you!</h1>
-      </div>
-      <div class="intro_card_separator"></div>
-      <p class = "intro_card_p">I'm a senior @ UIUC studying Computer Engineering. Before college, I was raised in the Boston area. 
-          My family is originally from Shanghai and moved to the US before I was born.<br><br>Previously, I was working at Blue Cross 
-          Blue Shield (2018), SIEMENS Healthineers (2017), and Verizon (2015). I also come from an entrepreneurial family that bootstrapped
-          a few small healthtech Startups (Zyno medical, CareEverywhere, Infutrionix). <br><br> At UIUC I am a city scholar’s ambassador 
-          and was a part of the pilot cohort. In August 2019, I'll be joining IBM as a Technical Solution Specialist designing proof-of-concepts 
-          for their cloud platform. My areas of interest are in product management, software development, and venture capital.
-      </p>
-      <h6 class = "intro_card_h6">TAIWAN TRIP 2017</h6>
-
-      <ul class = "intro_card_ul">
-          <a href="files/Alan_Lee_Resume.pdf">
-            <li class = "intro_card_li"><i class="fa fa-file fa-2x"></i></li>
-          </a>
-        <a href="mailto:alanlee9715@gmail.com">
-          <li class = "intro_card_li"><i class="fa fa-envelope fa-2x"></i></li>
-        </a>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Social Buttons-->
-  <footer class="social_container">
-    <div class="row">
-      <ul class="span text-center">
-        <li>
-          <a href="https://www.facebook.com/alan.lee.39794">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <span> - Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/alanlee9715/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-            <span> - Linkedin</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/aleel1597">
-            <i class="fa fa-github-square" aria-hidden="true"></i>
-            <span> - Github</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/alan.lee97/?hl=en">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <span> - Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://medium.com/@alanlee_80668">
-            <i class="fa fa-medium" aria-hidden="true"></i>
-            <span> - Medium</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- Hobbies Intro -->
-  <!-- <section id="Hobbies" class="hobbies_intro">
-    <div class="content">
-      <div class="content__container">
-        <p class="content__container__text">
-          In my free time, I like to
-        </p>
-
-        <ul class="content__container__list">
-          <li class="content__container__list__item">trade</li>
-          <li class="content__container__list__item">code</li>
-          <li class="content__container__list__item">exercise</li>
-          <li class="content__container__list__item">travel</li>
-        </ul>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Hobbies -->
-  <!-- <div class="site__wrapper">
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="images/investing.png" alt="">
-
-          <div class="card__overlay card__overlay--indigo">
-            <div class="card__overlay-content">
-              <ul class="card__meta">
-              </ul>
-
-              <a href="#0" class="card__title"><i class="fa fa-dollar"></i> - Investing/Personal Finance</a>
-
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="images/options.png" alt="">
-
-          <div class="card__overlay card__overlay--blue">
-            <div class="card__overlay-content">
-              <ul class="card__meta">
-              </ul>
-
-              <a href="#0" class="card__title"><i class="fa fa-line-chart"></i> - Derivatives Trading</a>
-
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="index.html">
+                        <img src="assets/images/images-removebg-preview-200x200.png" alt="Mobirise" title="" style="height: 5.9rem;">
+                    </a>
+                </span>
+                
             </div>
-          </div>
         </div>
-      </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-secondary display-4" href="index.html">
+                        Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link link text-secondary display-4" href="index.html#header3-g">Timeline</a></li><li class="nav-item"><a class="nav-link link text-secondary display-4" href="index.html#features12-m">Hobbies</a></li><li class="nav-item"><a class="nav-link link text-secondary display-4" href="assets/files/8.06_Lee , Alan_TSS_Chicago.docx" target="_blank">Resume</a></li><li class="nav-item"><a class="nav-link link text-secondary display-4" href="Playground.html" target="_blank">Playground</a></li></ul>
+            
+        </div>
+    </nav>
+</section>
+
+<section class="engine"><a href="https://mobirise.info/y">html web templates</a></section><section class="header3 cid-rGNgdG4i7P mbr-fullscreen mbr-parallax-background" id="header3-4">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(35, 35, 35);">
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="images/travel.jpg" alt="">
-
-          <div class="card__overlay card__overlay--indigo">
-            <div class="card__overlay-content">
-              <ul class="card__meta">
-              </ul>
-
-              <a href="#0" class="card__title"><i class="fa fa-plane"></i> - Traveling/Backpacking</a>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="images/fitness.png" alt="">
-
-          <div class="card__overlay card__overlay--indigo">
-            <div class="card__overlay-content">
-              <ul class="card__meta">
-              </ul>
-
-              <a href="#0" class="card__title"><i class="fa fa-heart"></i> - Health, Fitness</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="images/cooking.jpg" alt="">
-
-          <div class="card__overlay card__overlay--blue">
-            <div class="card__overlay-content">
-
-              <a href="#0" class="card__title"><i class="fa fa-spoon"></i> - Cooking</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <div class="card__image">
-          <img src="images/coding.png" alt="">
-
-          <div class="card__overlay card__overlay--blue">
-            <div class="card__overlay-content">
-
-              <a href="#0" class="card__title"><i class="fa fa-spoon"></i> - Coding</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-    <!-- My Travels Intro -->
-    <!-- <section id="Travels" class="my_travels_section">
-      <div class="my_travels_div">
-        <h1 class="highlight" href="">
-          Some of my favorite adventures around the world
-        </h1>
-        <p class="travel_text">
-          Travel is a major facet of my life. A constant goal of mine is to visit places that will expand my worldview.
-          Everytime I visit a new country, I try to gain a larger appreciation for <a class="highlight" href="#"
-            onclick="return false;">diversity</a> of culture.
-        </p>
-      </div>
-    </section> -->
-  
-    <!-- Map -->
-    <!-- <div id="map" style="width: 100%; height: 425px; background: grey"></div>
-    <script type="text/javascript" charset="UTF-8">
-  
-      /**
-       * Adds markers to the map highlighting the locations of the captials of
-       * France, Italy, Germany, Spain and the United Kingdom.
-       *
-       * @param  {H.Map} map      A HERE Map instance within the application
-       */
-      function addMarkersToMap(map) {
-        var parisMarker = new H.map.Marker({ lat: 48.8567, lng: 2.3508 });
-        map.addObject(parisMarker);
-  
-        var romeMarker = new H.map.Marker({ lat: 41.9, lng: 12.5 });
-        map.addObject(romeMarker);
-  
-        var berlinMarker = new H.map.Marker({ lat: 52.5166, lng: 13.3833 });
-        map.addObject(berlinMarker);
-  
-        var madridMarker = new H.map.Marker({ lat: 40.4, lng: -3.6833 });
-        map.addObject(madridMarker);
-  
-        var londonMarker = new H.map.Marker({ lat: 51.5008, lng: -0.1224 });
-        map.addObject(londonMarker);
-  
-        var amsterdamMarker = new H.map.Marker({ lat: 52.371442, lng: 4.896837 });
-        map.addObject(amsterdamMarker);
-  
-        var pragueMarker = new H.map.Marker({ lat: 50.088257, lng: 14.403474 });
-        map.addObject(pragueMarker);
-  
-        var viennaMarker = new H.map.Marker({ lat: 48.208391, lng: 16.372572 });
-        map.addObject(viennaMarker);
-  
-        var veniceMarker = new H.map.Marker({ lat: 45.440467, lng: 12.320520 });
-        map.addObject(veniceMarker);
-  
-        var florenceMarker = new H.map.Marker({ lat: 43.772326, lng: 11.254611 });
-        map.addObject(florenceMarker);
-  
-        var lisbonMarker = new H.map.Marker({ lat: 38.712271, lng: -9.145330 });
-        map.addObject(lisbonMarker);
-  
-        var AlbufeiraMarker = new H.map.Marker({ lat: 37.087798, lng: -8.249083 });
-        map.addObject(AlbufeiraMarker);
-  
-        var granadaMarker = new H.map.Marker({ lat: 37.174854, lng: -3.600292 });
-        map.addObject(granadaMarker);
-  
-        var tanzaniaMarker = new H.map.Marker({ lat: -3.071732, lng: 37.348668 });
-        map.addObject(tanzaniaMarker);
-  
-        var hungaryMarker = new H.map.Marker({ lat: 47.501403, lng: 19.057675 });
-        map.addObject(hungaryMarker);
-  
-        var icelandMarker = new H.map.Marker({ lat: 64.142108, lng: -21.927409 });
-        map.addObject(icelandMarker);
-  
-        var shanghaiMarker = new H.map.Marker({ lat: 31.218439, lng: 121.469693 });
-        map.addObject(shanghaiMarker);
-  
-        var beijingMarker = new H.map.Marker({ lat: 39.915662, lng: 116.396972 });
-        map.addObject(beijingMarker);
-  
-        var guilinMarker = new H.map.Marker({ lat: 25.272194, lng: 110.292077 });
-        map.addObject(guilinMarker);
-  
-        var xianMarker = new H.map.Marker({ lat: 34.285346, lng: 108.964471 });
-        map.addObject(xianMarker);
-  
-        var bangkokMarker = new H.map.Marker({ lat: 13.745698, lng: 100.540430 });
-        map.addObject(bangkokMarker);
-  
-        var taipeiMarker = new H.map.Marker({ lat: 25.039409, lng: 121.517900 });
-        map.addObject(taipeiMarker);
-  
-        var khaosiungMarker = new H.map.Marker({ lat: 22.623352, lng: 120.301308 });
-        map.addObject(khaosiungMarker);
-  
-        var tokyoMarker = new H.map.Marker({ lat: 35.669945, lng: 139.763695 });
-        map.addObject(tokyoMarker);
-  
-        var osakaMarker = new H.map.Marker({ lat: 34.693849, lng: 135.496777 });
-        map.addObject(osakaMarker);
-  
-        var sydneyMarker = new H.map.Marker({ lat: -33.858712, lng: 151.207143 });
-        map.addObject(sydneyMarker);
-  
-        var melbourneMarker = new H.map.Marker({ lat: -37.823792, lng: 144.958726 });
-        map.addObject(melbourneMarker);
-  
-        var brisbaneMarker = new H.map.Marker({ lat: -27.455769, lng: 153.039290 });
-        map.addObject(brisbaneMarker);
-  
-        var auckalndMarker = new H.map.Marker({ lat: -36.858382, lng: 174.759596 });
-        map.addObject(auckalndMarker);
-  
-        var christchruchMarker = new H.map.Marker({ lat: -43.535690, lng: 172.637083 });
-        map.addObject(christchruchMarker);
-  
-        var queenstownMarker = new H.map.Marker({ lat: -45.03225, lng: 168.660501 });
-        map.addObject(queenstownMarker);
-  
-        var sanjoseMarker = new H.map.Marker({ lat: 9.933383, lng: -84.081681 });
-        map.addObject(sanjoseMarker);
-  
-        var montegobayMarker = new H.map.Marker({ lat: 18.471621, lng: -77.922979 });
-        map.addObject(montegobayMarker);
-  
-        var sanjuanMarker = new H.map.Marker({ lat: 18.449166, lng: -66.081055 });
-        map.addObject(sanjuanMarker);
-  
-        var martiniqueMarker = new H.map.Marker({ lat: 14.606333, lng: -61.070771 });
-        map.addObject(martiniqueMarker);
-  
-        var nassauMarker = new H.map.Marker({ lat: 25.070129, lng: -77.343523 });
-        map.addObject(nassauMarker);
-  
-        var miamiMarker = new H.map.Marker({ lat: 25.777713, lng: -80.191005 });
-        map.addObject(miamiMarker);
-  
-        var nashvilleMarker = new H.map.Marker({ lat: 36.163887, lng: -86.778551 });
-        map.addObject(nashvilleMarker);
-  
-        var DCMarker = new H.map.Marker({ lat: 38.902448, lng: -77.036524 });
-        map.addObject(DCMarker);
-  
-        var NYCMarker = new H.map.Marker({ lat: 40.725136, lng: -73.995264 });
-        map.addObject(NYCMarker);
-  
-        var bostonMarker = new H.map.Marker({ lat: 42.360137, lng: -71.055271 });
-        map.addObject(bostonMarker);
-  
-        var burlingtonMarker = new H.map.Marker({ lat: 44.477636, lng: -73.215845 });
-        map.addObject(burlingtonMarker);
-  
-        var barharborMarker = new H.map.Marker({ lat: 44.389764, lng: -68.204725 });
-        map.addObject(barharborMarker);
-  
-        var montrealMarker = new H.map.Marker({ lat: 45.499893, lng: -73.574707 });
-        map.addObject(montrealMarker);
-  
-        var gunstockMarker = new H.map.Marker({ lat: 43.547775, lng: -71.406832 });
-        map.addObject(gunstockMarker);
-  
-        var champgainMarker = new H.map.Marker({ lat: 40.110407, lng: -88.231489 });
-        map.addObject(champgainMarker);
-  
-        var chicagoMarker = new H.map.Marker({ lat: 41.893758, lng: -87.623723 });
-        map.addObject(chicagoMarker);
-  
-        var stlousMarker = new H.map.Marker({ lat: 38.630550, lng: -90.194820 });
-        map.addObject(stlousMarker);
-  
-        var yellowstoneMarker = new H.map.Marker({ lat: 44.414069, lng: -110.578669 });
-        map.addObject(yellowstoneMarker);
-  
-        var saltlakeMarker = new H.map.Marker({ lat: 40.765367, lng: -111.894749 });
-        map.addObject(saltlakeMarker);
-  
-        var pheonixMarker = new H.map.Marker({ lat: 33.434245, lng: -112.092680 });
-        map.addObject(pheonixMarker);
-  
-        var grandcanyonMarker = new H.map.Marker({ lat: 36.050504, lng: -112.105224 });
-        map.addObject(grandcanyonMarker);
-  
-        var lasvegasMarker = new H.map.Marker({ lat: 36.173856, lng: -115.148497 });
-        map.addObject(lasvegasMarker);
-  
-        var sandiegoMarker = new H.map.Marker({ lat: 32.713696, lng: -117.160990 });
-        map.addObject(sandiegoMarker);
-  
-        var LAMarker = new H.map.Marker({ lat: 34.051056, lng: -118.247815 });
-        map.addObject(LAMarker);
-  
-        var SFMarker = new H.map.Marker({ lat: 37.788001, lng: -122.405537 });
-        map.addObject(SFMarker);
-  
-        var seattleMarker = new H.map.Marker({ lat: 47.610487, lng: -122.338895 });
-        map.addObject(seattleMarker);
-  
-        var vancouverMarker = new H.map.Marker({ lat: 49.280448, lng: -123.120983 });
-        map.addObject(vancouverMarker);
-  
-        var torontoMarker = new H.map.Marker({ lat: 43.652727, lng: -79.379370 });
-        map.addObject(torontoMarker);
-  
-        var anchorageMarker = new H.map.Marker({ lat: 61.218090, lng: -149.890616 });
-        map.addObject(anchorageMarker);
-  
-        var denaliMarker = new H.map.Marker({ lat: 63.069207, lng: -151.007756 });
-        map.addObject(denaliMarker);
-      }
-  
-  
-      /**
-       * Boilerplate map initialization code starts below:
-       */
-  
-      //Step 1: initialize communication with the platform
-      var platform = new H.service.Platform({
-        app_id: 'devportal-demo-20180625',
-        app_code: '9v2BkviRwi9Ot26kp2IysQ',
-        useHTTPS: true
-      });
-      var pixelRatio = window.devicePixelRatio || 1;
-      var defaultLayers = platform.createDefaultLayers({
-        tileSize: pixelRatio === 1 ? 256 : 512,
-        ppi: pixelRatio === 1 ? undefined : 320
-      });
-  
-      //Step 2: initialize a map - this map is centered over Europe
-      var map = new H.Map(document.getElementById('map'),
-        defaultLayers.normal.map, {
-          center: { lat: 25, lng: 0 },
-          zoom: 2,
-          pixelRatio: pixelRatio
-        });
-  
-      //Step 3: make the map interactive
-      // MapEvents enables the event system
-      // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
-      var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-  
-      // Create the default UI components
-      var ui = H.ui.UI.createDefault(map, defaultLayers);
-  
-      // Now use the map as required...
-      addMarkersToMap(map);
-    </script> -->
-
-  <!-- Timeline Intro-->
-  <!-- <section id="Timeline" class="intro">
     <div class="container">
-      <h1 class="timeline_intro"">My professional life at a glance &darr;</h1>
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 70%;">
+                <img src="assets/images/img-2520-1016x1355.jpeg" alt="Mobirise" title="">
+            </div>
+
+            <div class="media-content">
+                <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
+                    Hi, I'm Alan!</h1>
+                <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-5"><em>Adventurer. Engineer. Designer. Sushi Savant.&nbsp;</em></h3>
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    <p class="mbr-text mbr-fonts-style display-5"><br>Chicago Based | Boston Raised | Shanghai Origins<br><br>Passionate about Software Engineering, Product Management, and Design.<br><br>Seeking interesting problems to solve and people that bring out the best in me.</p>
+                </div>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-white-outline display-4" href="assets/files/8.06_Lee , Alan_TSS_Chicago.docx" target="_blank">RESUME</a></div>
+            </div>
+        </div>
     </div>
-  </section> -->
 
-  <!-- Timeline -->
-  <!-- <section class=" timeline">
-        <ul>
-          <li>
-            <div>
-              <time>1997</time> Born in Boston MA
+</section>
+
+<section class="header3 cid-rGO5aC04H7" id="header3-g">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-figure" style="width: 100%;">
+                <img src="assets/images/undraw-inspiration-lecl-1016x746.png" alt="Mobirise" title="">
             </div>
-          </li>
-          <li>
-            <div>
-              <time>2003</time> My father bootstraps CareEverywhere, a SaaS B2B medical device software platform. Funded
-              with a second morgage on our home, this was when I was introduced to startups.
+
+            <div class="media-content">
+                <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
+                    <br>My Professional Life at a glance</h1>
+                
+                <div class="mbr-section-text mbr-white pb-3 ">
+                    
+                </div>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-white-outline display-4" href="https://mobirise.co">LIVE DEMO</a></div>
             </div>
-          </li>
-          <li>
-            <div>
-              <time>2006</time> Our second family startup, Zyno Medical, a drug infusion medical device venture is
-              founded. I am now in third grade, coming to the office regularly to help around the office.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2012</time> I spend my first summer working full time at Zyno on the engineering team. My
-              involvement within my family's startups becomes real and helping in whatever free time with anything
-              needed becomes the norm.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2014</time> A spin off of Zyno, Infutronix is founded and launches its new medical device, the
-              Nimbus ambulatory infusion pump.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2015</time> I get my first non family startup internship at Verizon as a UI/UX Intern, High school
-              graduation, and I start college at Univeristy of Illinois at Urbana Champaign
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2017</time> I start working my first real external job at SIEMENS Healthineers as a Software
-              Engineer Co-Op building software for CT scanners.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>2018</time> My next job leads me to Blue Cross Blue Shield where I become a mix of a Business
-              Analyst, Prototype Software Engineer, and a Product Manager.
-            </div>
-          </li>
-
-          <li>
-            <div>
-              <time>2019</time> I graduate from Univeristy of Illinois at Urbana Champaign with a Bachelors in Computer
-              Engineering. I start my new job at IBM as a Technical Solutions Specialist.
-            </div>
-          </li>
-          <li>
-            <div>
-              <time>Beyond</time> More adventure awaits!
-            </div>
-          </li>
-
-        </ul>
-  </section>
-  <script type="text/javascript">
-    (function () {
-
-      'use strict';
-
-      // define variables
-      var items = document.querySelectorAll(".timeline li");
-
-      // check if an element is in viewport
-      // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-      function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-      }
-
-      function callbackFunc() {
-        for (var i = 0; i < items.length; i++) {
-          if (isElementInViewport(items[i])) {
-            items[i].classList.add("in-view");
-          }
-        }
-      }
-
-      // listen for events
-      window.addEventListener("load", callbackFunc);
-      window.addEventListener("resize", callbackFunc);
-      window.addEventListener("scroll", callbackFunc);
-
-    })();
-  </script> -->
-
-  <!-- Connect With me text -->
-  <section class="connect_with_me_container">
-    <div class="Connect_with_me">
-      <h1 class = "HAPIM">Have any projects in mind?</h1>  
-      <!-- <div class="connect_w_m_separator"></div> -->
-
-      <h1 class="Connect_with_me_text">
-          <br> Email me at alanlee9715 (at) gmail (dot) com
-          <br>
-        <span class="end-letters">Connect with me on </span>
-        <span class="middle-letters">Facebook</span><span class="alternate-middle-letters">Linkedin</span><span
-          class="alternate-middle-letters1">Github</span><span class="alternate-middle-letters2">Instagram</span><span
-          class="alternate-middle-letters3">Medium</span>
-        <span class="end-letters">!</span>
-
-      </h1>
+        </div>
     </div>
-  </section>
 
+</section>
+
+<section class="timeline1 cid-rGO7DmqZxP mbr-parallax-background" id="timeline1-l">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0; background-color: rgb(255, 255, 255);">
+    </div>
+
+    <div class="container align-center">
+        
+        
+
+        <div class="container timelines-container reverseTimeline" mbri-timelines="">
+            <!--1-->
+            <div class="row timeline-element reverse">
+                 <div class="timeline-date-panel col-xs-12 col-md-6  align-left">         
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-5">2015</p>
+                    </div>
+                </div>
+           <span class="iconBackground"></span>
+            <div class="col-xs-12 col-md-6 align-right">
+                <div class="timeline-text-content">
+                    <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Verizon Labs | UI/UX</h4>
+                    <p class="mbr-timeline-text mbr-fonts-style display-7">I start working my first enterprise job at Verizon Labs in Waltham MA on the UI/UX team where I do user research, AB testing, metric analysis and more.</p>
+                 </div>
+            </div>
+            </div>
+            <!--2-->
+            <div class="row timeline-element  separline">
+                <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-5">
+                            2017</p>
+                    </div>
+                </div>
+                <span class="iconBackground"></span>
+                <div class="col-xs-12 col-md-6 align-left ">
+                    <div class="timeline-text-content">
+                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                            SIEMENS Healthineers | Software Eng</h4>
+                        <p class="mbr-timeline-text mbr-fonts-style display-7">I begin my first software engineering gig where I get to build software and firmware for CT scanner movement subsystems. Creating all sorts of things with a lot of C, C++, and C#.<br></p>
+                    </div>
+                </div>
+            </div>
+            <!--3-->
+            <div class="row timeline-element reverse separline">
+                <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-5">
+                            2018</p>
+                    </div>
+                </div>
+                <span class="iconBackground"></span>
+                <div class="col-xs-12 col-md-6 align-right">
+                    <div class="timeline-text-content">
+                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                            Blue Cross Blue Shield | Product Manager</h4>      
+                        <p class="mbr-timeline-text mbr-fonts-style display-7">Starting as a mix of a business analyst and software engineer, I make fullstack web application prototypes with JAVA/Spring and react along with BI Dashboards. I pivot into my first managerial position as a product manager where I am in charge of leading 8 cross disciplinary teams of 6 members each. I help them build new ventures, business plans, and product prototypes.<br></p>
+                    </div>
+                </div>
+            </div>
+            <!--4-->
+            <div class="row timeline-element  separline">
+                <div class="timeline-date-panel col-xs-12 col-md-6 align-right">
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-5">
+                            2019 - Current</p>
+                    </div>
+                </div>
+                <span class="iconBackground"></span>
+                <div class="col-xs-12 col-md-6 align-left ">
+                    <div class="timeline-text-content">
+                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">
+                            IBM | Technical Solutions Engineer</h4>
+                        <p class="mbr-timeline-text mbr-fonts-style display-7">At IBM, I build MVP prototype fullstack web applications for clients with a variety of tech stacks and languages. Projects heavily emphasize leveraging different clouds with containerized architectures.</p>
+                    </div>
+                </div>
+            </div>
+            <!--5-->
+            <div class="row timeline-element reverse separline">
+                <div class="timeline-date-panel col-xs-12 col-md-6  align-left">
+                    <div class="time-line-date-content">
+                        <p class="mbr-timeline-date mbr-fonts-style display-5">
+                            2012 - Current</p>
+                    </div>
+                </div>
+                <span class="iconBackground"></span>
+                <div class="col-xs-12 col-md-6 align-right">
+                    <div class="timeline-text-content">
+                        <h4 class="mbr-timeline-title pb-3 mbr-fonts-style display-5">Zyno Medical/Infutronix | Founding Team</h4>
+                        <p class="mbr-timeline-text mbr-fonts-style display-7">At my Family's cluster of startups, I am responsible for managing/building/expanding our company websites in all aspects of development, architecture, design, marketing, ecommerce, SEO, and analytics.<br></p>
+                    </div>
+                </div>
+            </div>
+            <!--6-->
+            
+            <!--7-->
+            
+            <!--8-->
+            
+            <!--9-->
+            
+            <!--10-->
+            
+            <!--11-->
+            
+            <!--12-->
+            
+        </div>
+    </div>
+</section>
+
+<section class="features12 cid-rGO7OLkh3f" id="features12-m">
+    
+    
+
+    
+
+    <div class="container">
+        <h2 class="mbr-section-title pb-2 mbr-fonts-style display-1">
+            Hobbies</h2>
+        
+
+        <div class="media-container-row pt-5">
+            <div class="block-content align-right">
+                <div class="card pl-3 pr-3 pb-5">
+                    <div class="mbr-card-img-title">
+                        <div class="card-img pb-3">
+                             <span class="mbr-iconfont mbri-code"></span>
+                        </div>
+                        <div class="mbr-crt-title">
+                            <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
+                                Coding</h4>
+                        </div>
+                    </div>                
+
+                    <div class="card-box">
+                        <p class="mbr-text mbr-section-text mbr-fonts-style display-7">What was once only part of the job has become one of my favorite pastimes. Web development and design has been a great outlet for creativity while arduino tinkering harkons me back to the joy of playing with lego's.<br></p>
+                    </div>
+                </div>
+
+                <div class="card pl-3 pr-3">
+                    <div class="mbr-card-img-title">
+                        <div class="card-img pb-3">
+                            <span class="mbr-iconfont mbri-globe"></span>
+                        </div>
+                        <div class="mbr-crt-title">
+                            <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
+                                Travel</h4>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <p class="mbr-text mbr-section-text mbr-fonts-style display-7">
+                            As a child, I was privileged enough to explore many countries and cultures. Such has become a way of life for me and I make it a habit to travel to at least one new country per year.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mbr-figure m-auto" style="width: 60%;">
+                <img src="assets/images/undraw-a-moment-to-relax-bbpa-982x725.png" alt="Mobirise" title="">
+            </div>
+
+            <div class="block-content align-left">
+                <div class="card pl-3 pr-3 pb-5">
+                    <div class="mbr-card-img-title">
+                        <div class="card-img pb-3">
+                             <span class="mbr-iconfont mbri-growing-chart"></span>
+                        </div>
+                        <div class="mbr-crt-title">
+                            <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">
+                                Investing<br>Personal Finance<br>Derivatives Trading</h4>
+                        </div>
+                    </div>                
+
+                    <div class="card-box">
+                        <p class="mbr-text mbr-section-text mbr-fonts-style display-7">Some may like following sports, but for me, keeping up with the markets is my version of following current events. Nothing compares to the satisfaction of getting a trade right.</p>
+                    </div>
+                </div>
+
+                <div class="card pl-3 pr-3">
+                    <div class="mbr-card-img-title">
+                        <div class="card-img pb-3">
+                            <span class="mbr-iconfont mbri-hearth"></span>
+                        </div>
+                        <div class="mbr-crt-title">
+                            <h4 class="card-title py-2 mbr-crt-title mbr-fonts-style display-7">Health and Fitness<br>Cooking</h4>
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <p class="mbr-text mbr-section-text mbr-fonts-style display-7">
+                            Growing up as a overweight child, food has always been a point of contention for me. After taking control of my health and diet, cooking healthy is now one of my favorite hobbies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cid-rGOigXefqc" id="social-buttons2-o">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="col-md-8 align-center">
+                
+                <div class="social-list pl-0 mb-0">
+                    <a href="https://www.facebook.com/alan.lee.39794" target="_blank">
+                        <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
+                    </a>
+                    <a href="https://www.instagram.com/alan.lee97/?hl=en" target="_blank">
+                        <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                    </a>
+                    <a href="https://github.com/aleel1597" target="_blank">
+                        <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alanlee9715/" target="_blank">
+                        <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                    </a>
+                    <a href="https://medium.com/@alanlee_80668" target="_blank">
+                        <span class="px-2 mbr-iconfont mbr-iconfont-social socicon-medium socicon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script async src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script async src="assets/tether/tether.min.js"></script>
+  <script async src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script async src="assets/parallax/jarallax.min.js"></script>
+  <script async src="assets/sociallikes/social-likes.js"></script>
+  <script async src="assets/dropdown/js/nav-dropdown.js"></script>
+  <script async src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script async src="assets/theme/js/script.js"></script>
+  
+  
 </body>
-
 </html>
