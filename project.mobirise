@@ -52,12 +52,8 @@
     "siteUrl": "undefined",
     "gdpr": "",
     "uniqCompNum": 26,
-<<<<<<< HEAD
     "versionPublish": "4.10.10",
     "screenshot": "screenshot.png"
-=======
-    "versionPublish": "4.10.15"
->>>>>>> b2e04266696c0369456a42171c61166e79a60c01
   },
   "pages": {
     "index.html": {
