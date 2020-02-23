@@ -48,7 +48,7 @@
     ],
     "favicon": false,
     "noImageResize": "",
-    "google-analytics": "",
+    "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-146229947-7\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-146229947-7');\n</script>\n",
     "siteUrl": "undefined",
     "gdpr": false,
     "uniqCompNum": 26,
